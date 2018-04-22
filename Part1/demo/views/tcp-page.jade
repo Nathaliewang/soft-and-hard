@@ -1,0 +1,34 @@
+//- /**
+//-  * 文件：views/tcp-page.jade
+//-  * 作者：alwxkxk
+//-  * 修改时间：2018/04/22
+//-  * 描述：tcp-page jade文件
+//-  */
+
+extends layout
+
+block content
+  div
+    h1 软硬结合 
+      small Part1 demo
+    .row
+      .col-md-6
+        div.panel.panel-primary
+          div.panel-heading TCP服务器
+          div.panel-body 
+            p#status TCP socket 连接状态：#{status}
+            textarea#text(style="height:600px;width:100%;") #{text}
+      .col-md-6
+        div.panel.panel-info
+          div.panel-heading LED灯控制
+          div.panel-body
+            p LED1 : #{LED1}
+            div
+              button#openLed1.btn.btn-success(type='button') 开LED1
+              button#closeLed1.btn.btn-warning(type='button') 关LED1
+            h5.page-header
+            p LED2 : #{LED2}
+            div
+              button#openLed2.btn.btn-success(type='button') 开LED2
+              button#closeLed2.btn.btn-warning(type='button') 关LED2
+    script(src='/javascripts/tcp-page.js')
