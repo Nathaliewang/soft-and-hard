@@ -241,6 +241,10 @@ code.language-yaml {
 <ul>
 <li><a href="#part1">Part1</a></li>
 <li><a href="#part2">Part2</a></li>
+<li><a href="#part3">Part3</a></li>
+<li><a href="#part4">Part4</a></li>
+<li><a href="#part5">Part5</a></li>
+<li><a href="#part6">Part6</a></li>
 </ul>
 </li>
 <li><a href="#%E5%A3%B0%E6%98%8E">声明</a></li>
@@ -286,6 +290,7 @@ Country: CN
 <li>整个项目部署运行傻瓜式地教，保证整个项目能在读者手上运行起来。</li>
 <li>尽可能地解答会卡住大家继续项目走下去的所有问题。</li>
 <li>整个项目能在读者手上运行起来只是鱼，我还会授渔，在教程里会着重详解遇到问题我是怎么解决问题的。</li>
+<li>别人已经写好的教程不再重复写，比如HTML的学习，nodejs的学习,linux学习等等，都会告诉你们怎么利用网络搜索需要自学的教程。</li>
 </ul>
 <h2 class="mume-header" id="%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE">如何提问</h2>
 
@@ -299,15 +304,57 @@ Country: CN
 <h3 class="mume-header" id="%E6%8F%90%E9%97%AE%E8%A7%84%E8%8C%83">提问规范</h3>
 
 <ol>
-<li>要精确定价位置，是Part1第几节的哪一环节卡住了，附上图片。</li>
+<li>要精确定价位置，是Part1第几节的哪一步报错卡住了，附上图片。</li>
 </ol>
 <h2 class="mume-header" id="%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95-%E4%B8%8E-%E5%AE%89%E6%8E%92">教程目录 与 安排</h2>
 
 <h3 class="mume-header" id="part1">Part1</h3>
 
-<p>从ESP8266开始</p>
+<p>整个项目介绍并让大家先简单地运行起来~ 包含ESP8622烧录固件，各环节自调与联调。</p>
+<ul>
+<li>前提：会玩STM32，有一定硬件调试经验（USART串口调试，AT指令）</li>
+<li>成果：把Part1 的demo运行起来，实现本地WIFI下手机监控硬件。</li>
+<li>关键词：STM32、串口调试、AT指令、ESP8266、git、网络调试助手</li>
+<li>耗时：估计5到8小时</li>
+</ul>
 <h3 class="mume-header" id="part2">Part2</h3>
 
+<p>讲解Part1 demo，包含静态网页制作，express框架。</p>
+<ul>
+<li>成果：简单的网页开发与Nodejs应该能入门了，有能力修改出自己想要的页面效果。</li>
+<li>关键词：HTML、Javascript、CSS、Jquery、bootstrap、w3cschool、菜鸟教程、《深入浅出nodejs》、《XX天入门nodejs》、TCP服务器、express</li>
+<li>耗时：自学网页开发（估计5到8天），自学nodejs（估计3到8天），共估计10到20天差不多能入个门。</li>
+</ul>
+<h3 class="mume-header" id="part3">Part3</h3>
+
+<p>将Part1 demo运行在云服务器上，主要是学习linux（ubuntu），云服务器各种折腾。</p>
+<ul>
+<li>成果：Linux初步入门、部署到云服务器上，此时真正实现远程监控硬件。</li>
+<li>关键词：ubuntu、云服务器、vi、《鳥哥的 Linux 私房菜》、bash、Xshell、winSCP</li>
+<li>耗时：自学linux估计5到10天左右能入个门。</li>
+</ul>
+<h3 class="mume-header" id="part4">Part4</h3>
+
+<p>引入mongoDB数据库，将数据保存到数据库里，并将历史数据可视化。<br>
+（可选学）并讲一些协议，包含TCP协议(讲一下基于TCP自定义自己的协议规则)，HTTP协议，websocket协议。然后会进行优化，如把HTTP轮询换成websocket协议。</p>
+<ul>
+<li>成果：完成Part4 demo，数据可视化会让整个效果更炫，增加实时性，这个物联网项目基本成型。</li>
+<li>关键词：《计算机网络》、tcpdump、wireshark、《TCP/IP详解》、socketio库、echart库、TLV格式</li>
+<li>耗时：数据可视化几个小时入个门，数据库估计2天入门，协议简单地点一下1天，要想跟着继续深入可能要多花几天。整个可能需要5到10天吧。</li>
+</ul>
+<h3 class="mume-header" id="part5">Part5</h3>
+
+<p>Part5及往后看阅读情况写吧。<br>
+各种性能测试与优化，ESP8266的AT固件改成自己编译的固件，说一下各物联网平台。</p>
+<ul>
+<li>关键词：redis、nginx、CDN</li>
+</ul>
+<h3 class="mume-header" id="part6">Part6</h3>
+
+<p>使用electron开发PC桌面软件，使用ionic开发手机APP。</p>
+<ul>
+<li>关键词：electron、ionic</li>
+</ul>
 <h2 class="mume-header" id="%E5%A3%B0%E6%98%8E">声明</h2>
 
 <p>保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：<a href="https://github.com/alwxkxk/sofe-and-hard%E3%80%82">https://github.com/alwxkxk/sofe-and-hard。</a></p>
