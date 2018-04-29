@@ -228,10 +228,12 @@ code.language-yaml {
       <div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>▶︎</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
 <li><a href="#%E8%BD%AF%E7%A1%AC%E7%BB%93%E5%90%88%E5%86%99%E7%BB%99%E7%A1%AC%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%85%A8%E6%A0%88%E5%85%A5%E9%97%A8%E5%AE%9E%E6%88%98">软硬结合——写给硬件开发工程师的全栈入门实战</a>
 <ul>
-<li><a href="#%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">整个项目简单介绍</a></li>
 <li><a href="#%E4%BD%9C%E8%80%85%E6%B0%B4%E5%B9%B3">作者水平</a></li>
+<li><a href="#%E8%AF%BB%E8%80%85%E6%B0%B4%E5%B9%B3%E8%A6%81%E6%B1%82">读者水平要求</a></li>
+<li><a href="#%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">整个项目简单介绍</a></li>
 <li><a href="#%E6%95%99%E7%A8%8B%E7%89%B9%E7%82%B9">教程特点</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE">如何提问</a>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
+<li><a href="#%E6%8F%90%E9%97%AE">提问</a>
 <ul>
 <li><a href="#%E6%8F%90%E9%97%AE%E4%B9%8B%E5%89%8D">提问之前</a></li>
 <li><a href="#%E6%8F%90%E9%97%AE%E8%A7%84%E8%8C%83">提问规范</a></li>
@@ -254,6 +256,20 @@ code.language-yaml {
 <h1 class="mume-header" id="%E8%BD%AF%E7%A1%AC%E7%BB%93%E5%90%88%E5%86%99%E7%BB%99%E7%A1%AC%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%9A%84%E5%85%A8%E6%A0%88%E5%85%A5%E9%97%A8%E5%AE%9E%E6%88%98">软硬结合——写给硬件开发工程师的全栈入门实战</h1>
 
 <p>软硬件结合可以说是所有硬件开发人员心中的一大追求，当一个人技能树上点亮了软硬件，所有创意想法基本都能靠自己去实现。</p>
+<h2 class="mume-header" id="%E4%BD%9C%E8%80%85%E6%B0%B4%E5%B9%B3">作者水平</h2>
+
+<p>2017年毕业时做的毕业设计是一个物联网项目，硬件上是STM32+ESP8266，自己搭服务器（nodejs+mongodb），客户端做网站做微信小程序（我觉得我是第一个用微信小程序做毕设的人），ESP8266与服务器之间的通信是基于websocket的（这个编译固件很麻烦），打算将这个项目重构并写出教程，针对硬件开发人员写的全栈应用开发入门实战。2018年开始写这教程时，我的水平是毕业不足一年，是初级全栈工程师（不足一年经验）+ 略懂硬件开发，经验并不是很足，若发现有任何问题一定要提Issues。</p>
+<ul>
+<li>毕设PPT截图：<br>
+<img src="images\%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE.png?0.23601737670899792" alt=""></li>
+</ul>
+<h2 class="mume-header" id="%E8%AF%BB%E8%80%85%E6%B0%B4%E5%B9%B3%E8%A6%81%E6%B1%82">读者水平要求</h2>
+
+<ol>
+<li>折腾能力强</li>
+<li>不是伸手党</li>
+<li>有过硬件发开经验</li>
+</ol>
 <h2 class="mume-header" id="%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">整个项目简单介绍</h2>
 
 <p>整个项目会完完整整地做一个物联网应用，包含软硬件。先用通俗的话具体地讲一下，在一块主板在宿舍运行，我在课室里通过手机打开网页，看到现在宿舍实时温度，并且通过手机点击按钮把LED灯打开了。<br>
@@ -281,20 +297,29 @@ OS Version: 10.0
 Default Encoding: GBK
 Language: zh
 Country: CN
---></g></svg></p><h2 class="mume-header" id="%E4%BD%9C%E8%80%85%E6%B0%B4%E5%B9%B3">作者水平</h2>
-
-<p>2017年毕业时做的毕业设计是一个物联网项目，硬件上是STM32+ESP8266，自己搭服务器（nodejs+mongodb），客户端做网站做微信小程序（我觉得我是第一个用微信小程序做毕设的人），打算将这个项目重构并写出教程，针对硬件开发人员写的全栈应用开发入门实战。2018年开始写这教程时，我的水平是毕业不足一年，是初级全栈工程师（不足一年经验）+ 略懂硬件开发，经验并不是很足，若发现有任何问题一定要提Issues。</p>
-<h2 class="mume-header" id="%E6%95%99%E7%A8%8B%E7%89%B9%E7%82%B9">教程特点</h2>
+--></g></svg></p><h2 class="mume-header" id="%E6%95%99%E7%A8%8B%E7%89%B9%E7%82%B9">教程特点</h2>
 
 <ul>
 <li>整个项目部署运行傻瓜式地教，保证整个项目能在读者手上运行起来。</li>
 <li>尽可能地解答会卡住大家继续项目走下去的所有问题。</li>
 <li>整个项目能在读者手上运行起来只是鱼，我还会授渔，在教程里会着重详解遇到问题我是怎么解决问题的。</li>
-<li>别人已经写好的教程不再重复写，比如HTML的学习，nodejs的学习,linux学习等等，都会告诉你们怎么利用网络搜索需要自学的教程。</li>
+<li>我不生产水，我只是水的搬运工，别人已经写好的教程不再重复写，比如HTML的学习，nodejs的学习,linux学习等等，都会告诉你们怎么利用网络搜索需要自学的教程，此教程做的只是连珠成串。</li>
 </ul>
-<h2 class="mume-header" id="%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE">如何提问</h2>
+<h2 class="mume-header" id="%E5%BC%80%E5%A7%8B">开始</h2>
 
-<p>整个教程都是在gitHub上开源，所以必须要学习git（软件开发必学）,遇到任何问题提Issues。</p>
+<ol>
+<li>百度git 并运行安装<br>
+<img src="images\%E7%99%BE%E5%BA%A6git.png?0.9206685035697539" alt=""></li>
+<li>在桌面上右键点击 <code>git bash Here</code></li>
+<li>输入<code>git clone https://github.com/alwxkxk/sofe-and-hard.git</code>（聪明人&amp;懒鬼一般会复制粘贴）</li>
+<li>可以看到下载了一个文件夹，进去点击<code>第一次阅读.html</code></li>
+<li>整个教程在不断更新中，进入文件并运行<code>git pull</code>即可更新。<br>
+<img src="images\git%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B.gif?0.8797287563211462" alt=""></li>
+</ol>
+<h2 class="mume-header" id="%E6%8F%90%E9%97%AE">提问</h2>
+
+<p>整个教程都是在gitHub上开源，所以必须要学习git（软件开发必学）,遇到任何问题提Issues。<br>
+<img src="images\%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE.png?0.7263958946890432" alt=""></p>
 <h3 class="mume-header" id="%E6%8F%90%E9%97%AE%E4%B9%8B%E5%89%8D">提问之前</h3>
 
 <ol>
@@ -305,6 +330,7 @@ Country: CN
 
 <ol>
 <li>要精确定价位置，是Part1第几节的哪一步报错卡住了，附上图片。</li>
+<li>描述一下你尝试解决问题的现象。</li>
 </ol>
 <h2 class="mume-header" id="%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95-%E4%B8%8E-%E5%AE%89%E6%8E%92">教程目录 与 安排</h2>
 
@@ -312,7 +338,7 @@ Country: CN
 
 <p>整个项目介绍并让大家先简单地运行起来~ 包含ESP8622烧录固件，各环节自调与联调。</p>
 <ul>
-<li>前提：会玩STM32，有一定硬件调试经验（USART串口调试，AT指令）</li>
+<li>前提：有一定硬件调试经验（USART串口调试，AT指令）</li>
 <li>成果：把Part1 的demo运行起来，实现本地WIFI下手机监控硬件。</li>
 <li>关键词：STM32、串口调试、AT指令、ESP8266、git、网络调试助手</li>
 <li>耗时：估计5到8小时</li>
@@ -345,7 +371,7 @@ Country: CN
 <h3 class="mume-header" id="part5">Part5</h3>
 
 <p>Part5及往后看阅读情况写吧。<br>
-各种性能测试与优化，ESP8266的AT固件改成自己编译的固件，说一下各物联网平台。</p>
+各种性能测试与优化，ESP8266的AT固件改成自己编译的固件（这个蛮难搞的），说一下各物联网平台。</p>
 <ul>
 <li>关键词：redis、nginx、CDN</li>
 </ul>
