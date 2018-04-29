@@ -1,6 +1,14 @@
 #!/usr/bin/env node
 
 /**
+ * 文件：bin/www
+ * 作者：alwxkxk
+ * 修改时间：2018/04/29
+ * 描述：
+ * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
+ */
+
+/**
  * Module dependencies.
  */
 
@@ -9,11 +17,14 @@ var debug = require('debug')('demo:server')
 var http = require('http')
 var tcpServer = require('./tcp-server')
 var open = require('open')
+var HTTP_PORT = require('../config/config.js').HTTP_PORT
+var HOST = require('../config/config.js').HOST
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000')
+// var port = normalizePort(process.env.PORT || '3000')
+var port = normalizePort(HTTP_PORT)
 app.set('port', port)
 
 /**
@@ -88,5 +99,5 @@ function onListening () {
     ? 'pipe ' + addr
     : 'port ' + addr.port
   debug('Listening on ' + bind)
-  open('http://127.0.0.1:3000/tcp-page')
+  open(`http://${HOST}:${HTTP_PORT}/tcp-page`)
 }

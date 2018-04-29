@@ -3,6 +3,7 @@
  * 作者：alwxkxk
  * 修改时间：2018/04/22
  * 描述：tcp-page路由文件
+ * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
  */
 var express = require('express')
 const moment = require('moment')

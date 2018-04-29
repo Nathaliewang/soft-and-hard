@@ -1,11 +1,13 @@
 /**
  * 文件：bin/tcp-server.js
  * 作者：alwxkxk
- * 修改时间：2018/04/22
+ * 修改时间：2018/04/29
  * 描述：TCP服务器，对socket操作
+ * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
  */
 // const HOST = '127.0.0.1'
-const HOST = '192.168.1.121' // 要填入自己的内网IP地址
+// const HOST = '192.168.1.121' // 要填入自己的内网IP地址
+const HOST = require('../config/config.js').HOST
 
 const moment = require('moment')
 const net = require('net')
