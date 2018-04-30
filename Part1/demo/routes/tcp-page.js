@@ -18,7 +18,7 @@ router.get('/LED1', function (req, res, next) {
   res.send(`LED1:${tcpServer.LED1}`).end()
 })
 router.get('/LED2', function (req, res, next) {
-  res.send(`LED1:${tcpServer.LED2}`).end()
+  res.send(`LED2:${tcpServer.LED2}`).end()
 })
 
 router.post('/LED1', function (req, res, next) {
