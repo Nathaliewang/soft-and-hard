@@ -1,7 +1,7 @@
 /**
  * 文件：routers/tcp-page.js
  * 作者：alwxkxk
- * 修改时间：2018/04/22
+ * 修改时间：2018/04/30
  * 描述：tcp-page路由文件
  * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
  */
@@ -14,10 +14,15 @@ router.get('/', function (req, res, next) {
   let text = tcpServer.mySocket ? tcpServer.mySocket.myText : ''
   res.render('tcp-page', {text: text, LED1: tcpServer.LED1, LED2: tcpServer.LED2, status: status})
 })
+router.get('/LED1', function (req, res, next) {
+  res.send(`LED1:${tcpServer.LED1}`).end()
+})
+router.get('/LED2', function (req, res, next) {
+  res.send(`LED1:${tcpServer.LED2}`).end()
+})
 
 router.post('/LED1', function (req, res, next) {
   let status = tcpServer.mySocket ? !tcpServer.mySocket.destroyed : false
-  if (req.body.LED1) tcpServer.LED1 = req.body.LED1
   if (status) {
     let sendText = 'LED1:' + tcpServer.LED1 + '\n'
     tcpServer.mySocket.write(sendText, 'ascii')
@@ -28,7 +33,6 @@ router.post('/LED1', function (req, res, next) {
 
 router.post('/LED2', function (req, res, next) {
   let status = tcpServer.mySocket ? !tcpServer.mySocket.destroyed : false
-  if (req.body.LED2) tcpServer.LED2 = req.body.LED2
   if (status) {
     let sendText = 'LED2:' + tcpServer.LED2 + '\n'
     tcpServer.mySocket.write(sendText, 'ascii')

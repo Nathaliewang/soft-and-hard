@@ -7,5 +7,6 @@
  */
 module.exports = {
   HOST: '192.168.1.121', // 必改！要填入自己的内网IP地址
-  HTTP_PORT: '8888' // http 端口
+  HTTP_PORT: '8888', // http 端口
+  TCP_PORT: '2424'// tcp 端口
 }

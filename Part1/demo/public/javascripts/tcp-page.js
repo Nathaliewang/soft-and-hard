@@ -1,7 +1,7 @@
 /**
  * 文件：public/javascripts/tcp-page.js
  * 作者：alwxkxk
- * 修改时间：2018/04/22
+ * 修改时间：2018/04/30
  * 描述：tcp-page页面 的js脚本
  * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
  */
@@ -28,5 +28,11 @@ setInterval(() => {
   })
   $.get('/tcp-page/socketSatus', (obj) => {
     $('#status').text('TCP socket 连接状态：' + obj.status)
+  })
+  $.get('/tcp-page/LED1', (obj) => {
+    $('#LED1Text').text(obj)
+  })
+  $.get('/tcp-page/LED2', (obj) => {
+    $('#LED2Text').text(obj)
   })
 }, 500)
