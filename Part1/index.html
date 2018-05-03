@@ -269,7 +269,7 @@ code.language-yaml {
 <p>这一部分主要是让项目运行起来~</p>
 <h2 class="mume-header" id="demo1%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D">demo1项目介绍</h2>
 
-<p><img src="images\%E9%A1%B9%E7%9B%AE%E5%9B%BE.png?0.6321978905315697" alt=""><br>
+<p><img src="images\%E9%A1%B9%E7%9B%AE%E5%9B%BE.png?0.41561997063002787" alt=""><br>
 整个包括四个部分，从左往右包含了硬件部分、通信部分、服务器部分、客户端部分。</p>
 <ul>
 <li>硬件：STM32。</li>
@@ -284,69 +284,69 @@ code.language-yaml {
 <h2 class="mume-header" id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%A2%E6%88%B7%E7%AB%AF">服务器&amp;客户端</h2>
 
 <p>服务器&amp;客户端调试，基本证明软件部分能正常运行。服务器左侧数据全部由网络调试助手模拟。<br>
-<img src="images\%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93.png?0.39712077646943733" alt=""></p>
+<img src="images\%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93.png?0.5561229363324971" alt=""></p>
 <h3 class="mume-header" id="%E5%AE%89%E8%A3%85nodejs">安装nodejs</h3>
 
 <ol>
 <li>搜索nodejs官网</li>
 <li>下载nodejs，为了保持一致，大家下载稳定版本V8.x。（LTS: Long Term Support ）<br>
-<img src="images\%E4%B8%8B%E8%BD%BDnodejs.png?0.9765531660018347" alt=""></li>
+<img src="images\%E4%B8%8B%E8%BD%BDnodejs.png?0.7238986972077315" alt=""></li>
 <li>在cmd里运行<code>node -v</code>与<code>npm -v</code>验证nodejs安装成功<br>
-<img src="images\%E9%AA%8C%E8%AF%81nodejs%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png?0.028990218098797094" alt=""><br>
+<img src="images\%E9%AA%8C%E8%AF%81nodejs%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png?0.9976845620145249" alt=""><br>
 这个验证很常见，有两个用途：1.程序安装成功。2.环境变量（PATH） 设置正确。</li>
 </ol>
 <h3 class="mume-header" id="%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A8%8B%E5%BA%8F">启动服务器程序</h3>
 
 <ol>
 <li>获取内网IPv4地址，在cmd里输入<code>ipconfig</code>，找到内网IPv4址。<br>
-<img src="images\%E8%8E%B7%E5%8F%96%E5%86%85%E7%BD%91IP%E5%9C%B0%E5%9D%80.png?0.8779721457896212" alt=""></li>
+<img src="images\%E8%8E%B7%E5%8F%96%E5%86%85%E7%BD%91IP%E5%9C%B0%E5%9D%80.png?0.7213636118068281" alt=""></li>
 <li>修改配置文件<code>Part1/demo/config/config.js</code>，将你的内网IPv4地址填入HOST。<br>
-<img src="images\%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png?0.5677868472305498" alt=""><br>
+<img src="images\%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png?0.47709068731935256" alt=""><br>
 如果是家里的WIFI一般是192.168开头的，比如我现在的是192.168.1.121，校园网我就不知道了~</li>
 <li>点击<code>Part1/demo/运行.bat</code><br>
-<img src="images\%E8%BF%90%E8%A1%8Cdemo.gif?0.36250086585480257" alt=""><br>
+<img src="images\%E8%BF%90%E8%A1%8Cdemo.gif?0.02818534228343128" alt=""><br>
 脚本运行起来会自动打开浏览器对应的页面<code>http://${HOST}:{HTTP_PORT}/tcp-page</code>（我的环境就是http://192.168.1.121:8888/tcp-page，${variable}这种样式代表的是变量，大家需要根据自己的情况修改这个变量的值），顺手就把HTTP服务器验证完毕。</li>
 <li>手机连接同一个WIFI，使用浏览器访问相同的网址。<br>
-<img src="images\demo1%E6%89%8B%E6%9C%BA%E6%95%88%E6%9E%9C%E5%9B%BE.png?0.886133033853294" alt=""><br>
+<img src="images\demo1%E6%89%8B%E6%9C%BA%E6%95%88%E6%9E%9C%E5%9B%BE.png?0.3683527943282674" alt=""><br>
 注意符号要用英文符号，中文符号是不行的。（两者区别就是，中文符号占两个空格位置，可自行搜索全角与半角的区别）</li>
 </ol>
 <p>配置错误会导致报错强制退出，请重新核对内网IP地址：<br>
-<img src="images\%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%E6%95%88%E6%9E%9C%E5%9B%BE.gif?0.018153726016967964" alt=""></p>
+<img src="images\%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%E6%95%88%E6%9E%9C%E5%9B%BE.gif?0.777497565608045" alt=""></p>
 <h3 class="mume-header" id="%E9%AA%8C%E8%AF%81tcp%E6%9C%8D%E5%8A%A1%E5%99%A8">验证TCP服务器</h3>
 
 <p>要验证TCP服务器，你需要网络调试助手。<a href="https://pan.baidu.com/s/1YGQKlV0F9FadfUhYLSFEJA">网盘分享</a>（点击右键 在新标签页中打开链接）</p>
 <ol>
 <li>运行网络调试助手，风络设置：协议类型TCP Client、本地主机地址：内网IP、远程主机地址内网IP:端口。点击连接。<br>
-<img src="images\%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B%E9%85%8D%E7%BD%AE.png?0.7830760863545281" alt=""><br>
+<img src="images\%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B%E9%85%8D%E7%BD%AE.png?0.5672143577965811" alt=""><br>
 连接成功会返回OK，并且网页上会有显示建立连接。</li>
 <li>联调效果，网页上点击按钮，能发送字符串到网络调试助手，而网络调试助手发送的字符串，能在网页上显示出来，如果发送的是<code>LED1:1</code>，还能改变网页LED状态。<br>
-<img src="images\TCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%81%94%E8%B0%83.gif?0.572667442800443" alt=""></li>
+<img src="images\TCP%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%81%94%E8%B0%83.gif?0.10460553511709003" alt=""></li>
 </ol>
 <h2 class="mume-header" id="%E9%80%9A%E4%BF%A1">通信</h2>
 
 <p>接下来要做的就是，将网络调试助手替换成ESP8266。或许有人会问，为什么不直接用ESP8266直接联调，中间还搞个网络调试助手来模拟ESP8266浪费大家的青春年华？那是因为物联网项目的战线实在太长，光是软件部分就要搞这么久，引入硬件（近乎玄学）就需要更久了，直接整个demo1联调，只要出一个问题都不想继续搞下去了。所以必须保证每一环节能自己证明自己是正常运行的，才能安心地与其它环节对接联调，对接联调出现问题时能够回到自证调试，从而快速确定问题位置。</p>
 <p>在项目中，ESP8266作为通信部分，左边与STM32相连通过串口通信进行数据交互，右边通过WIFI连接TCP服务器进行数据交互。所以自证的时候，左侧在电脑上用串口调试助手模拟STM32，右侧用网络调试助手模拟TCP服务器。<br>
-<img src="images\ESP8266%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93.png?0.7807404962324245" alt=""></p>
+<img src="images\ESP8266%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93.png?0.8613000961123525" alt=""></p>
 <h3 class="mume-header" id="esp8266-%E9%AA%8C%E8%AF%81at%E6%8C%87%E4%BB%A4">ESP8266 验证AT指令</h3>
 
 <ol>
 <li>ESP8266接线<br>
 ESP8266都不知道火了多久了，文档还是一样的散乱，对新手还是那么的不友好，至少是不知道入口在哪里，怎么进行最简单的验证~<br>
 首先我们在代理商安信可的<a href="http://wiki.ai-thinker.com/esp8266/docs">文档中心</a>里找到用户手册。里面可以找到esp8266-01的接线图，使用USB转TTL模块连接到电脑里。<br>
-<img src="images\%E5%AE%89%E4%BF%A1%E5%8F%AF%20%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83%20%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.png?0.44803002377680623" alt=""><br>
-<img src="images\ESP8266-01%E6%8E%A5%E7%BA%BF%E5%9B%BE.png?0.01658113142559703" alt=""><br>
+<img src="images\%E5%AE%89%E4%BF%A1%E5%8F%AF%20%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83%20%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C.png?0.7696852521236415" alt=""><br>
+<img src="images\ESP8266-01%E6%8E%A5%E7%BA%BF%E5%9B%BE.png?0.09615548795963536" alt=""><br>
 因为有多个地方要接3.3V，大家可以用开发板与usb转串口配合着接线，反正我是用面包板加电源模块接的。</li>
 <li>串口调试助手 验证AT指令 <a href="https://pan.baidu.com/s/1pE4hrT1RTdhZVFbow4SSOg">网盘分享</a><br>
 第一个文档有AT指令的介绍，根据第二个文档做一下AT指令的最简单的验证，比如连接WIFI、连接TCP等都有讲，我就不多加搬运了~<br>
-<img src="images\ESP8266%20AT%E6%8C%87%E4%BB%A4%E6%96%87%E6%A1%A3.png?0.7569154092366244" alt=""></li>
+<img src="images\ESP8266%20AT%E6%8C%87%E4%BB%A4%E6%96%87%E6%A1%A3.png?0.5814594321922775" alt=""></li>
 <li>一样是使用网络调试助手，不同的是这次使用网络调试助手充当TCP服务器端。通过AT指令成功连接WIFI，连接TCP服务器，就验证成功了。后面就是将TCP服务器换成我们之前运行的服务器。<br>
-<img src="images\esp8266%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B.png?0.9038723892448748" alt=""><br>
-若验证AT指令失败，请尝试重新烧录AT固件 <a href="./esp8266%E7%83%A7%E5%BD%95%E5%9B%BA%E4%BB%B6.html">ESP8266 烧录固件</a></li>
+<img src="images\esp8266%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B.png?0.004833859321102141" alt=""></li>
 </ol>
+<p>若验证AT指令失败，请尝试重新烧录AT固件 <a href="./esp8266%E7%83%A7%E5%BD%95%E5%9B%BA%E4%BB%B6.html">ESP8266 烧录固件</a></p>
 <h2 class="mume-header" id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E9%80%9A%E4%BF%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E8%B0%83">服务器与通信之间的联调</h2>
 
 <p>完成以上步骤，服务器与ESP8266分别都自证成功，现在将两者联调起来。相对于服务器自证来说，就是将TCP客户端从网络调试助手替换为ESP8266，相对于通信自证来说，就是将TCP服务器从网络调试助手替换为我们编写的服务器。联调的效果就变成了：<br>
-<img src="images\%E9%80%9A%E4%BF%A1%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%81%94%E8%B0%83.png?0.8612897688359942" alt=""></p>
+<img src="images\%E9%80%9A%E4%BF%A1%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%81%94%E8%B0%83.png?0.4675273870794381" alt=""></p>
 <h3 class="mume-header" id="%E8%81%94%E8%B0%83">联调</h3>
 
 <ol>
@@ -359,12 +359,13 @@ ESP8266都不知道火了多久了，文档还是一样的散乱，对新手还�
 <li><code>AT+CIPSTART=&quot;TCP&quot;,&quot;${HOST}&quot;,${PORT}</code> 输入你的内网IP地址与端口，像我就是<code>AT+CIPSTART=&quot;TCP&quot;,&quot;192.168.1.121&quot;,2424</code> ，大家肯定跟我不一样的，要自己换。</li>
 <li><code>AT+CIPSEND=6</code> 向TCP发送六个字节，然后就可以发LED1:0，这样的数据。</li>
 <li><code>AT+CIPCLOSE</code> 关闭TCP连接<br>
-<img src="images\%E9%80%9A%E4%BF%A1%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%81%94%E8%B0%83%E6%95%88%E6%9E%9C.gif?0.22305940559393522" alt=""></li>
+<img src="images\%E9%80%9A%E4%BF%A1%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%81%94%E8%B0%83%E6%95%88%E6%9E%9C.gif?0.06974523732555471" alt=""><br>
+我手上测试的AT固件是1.6版本的，<code>AT+GMR</code>查看版本。</li>
 </ul>
 <h2 class="mume-header" id="%E7%A1%AC%E4%BB%B6">硬件</h2>
 
 <p>现在就是要自证硬件环节没问题，使用串口调试助手模拟ESP8266，手动模拟出TCP服务器的数据交互。特别注意，对于STM32我们将会使用两个串口，串口0用于调试。串口1用于与ESP8266连接（用串口调试助手代替模拟）。<br>
-<img src="images\%E7%A1%AC%E4%BB%B6%E8%B0%83%E8%AF%95.png?0.4409119402578574" alt=""><br>
+<img src="images\%E7%A1%AC%E4%BB%B6%E8%B0%83%E8%AF%95.png?0.6158112081881137" alt=""><br>
 对于STM32来说，它要做的就是三件事：</p>
 <ol>
 <li>串口0打印debug信息(用于连接电脑调试)，串口1与ESP8266连接（用串口调试助手代替模拟）。</li>
@@ -379,7 +380,7 @@ ESP8266都不知道火了多久了，文档还是一样的散乱，对新手还�
 
 <p>相对于硬件自证来说，无非就是将串口1把串口调试助手更换为ESP8266。<br>
 整个效果回到了demo1项目图：<br>
-<img src="images\%E9%A1%B9%E7%9B%AE%E5%9B%BE.png?0.6321978905315697" alt=""><br>
+<img src="images\%E9%A1%B9%E7%9B%AE%E5%9B%BE.png?0.41561997063002787" alt=""><br>
 整个过程包含以下过程：</p>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="485px" preserveAspectRatio="none" style="width:631px;height:485px;" version="1.1" viewBox="0 0 631 485" width="631px" zoomAndPan="magnify"><defs><filter height="300%" id="f1hqcuk2mdfh7m" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"></feGaussianBlur><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"></feColorMatrix><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"></feOffset><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"></feBlend></filter></defs><g><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="39" x2="39" y1="41.1201" y2="442.1729"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="195" x2="195" y1="41.1201" y2="442.1729"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="389.5" x2="389.5" y1="41.1201" y2="442.1729"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="517.5" x2="517.5" y1="41.1201" y2="442.1729"></line><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="597.5" x2="597.5" y1="41.1201" y2="442.1729"></line><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="59" x="8" y="3"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="15" y="26.0439">STM32</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="59" x="8" y="441.1729"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="45" x="15" y="464.2168">STM32</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="157" y="3"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="164" y="26.0439">ESP8266</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="73" x="157" y="441.1729"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="59" x="164" y="464.2168">ESP8266</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="134" x="320.5" y="3"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="327.5" y="26.0439">TCP与HTTP服务器</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="134" x="320.5" y="441.1729"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="120" x="327.5" y="464.2168">TCP与HTTP服务器</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="84" x="473.5" y="3"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="480.5" y="26.0439">手机或电脑</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="84" x="473.5" y="441.1729"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="70" x="480.5" y="464.2168">手机或电脑</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="571.5" y="3"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="578.5" y="26.0439">LED1</text><rect fill="#FEFECE" filter="url(#f1hqcuk2mdfh7m)" height="33.1201" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="571.5" y="441.1729"></rect><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="35" x="578.5" y="464.2168">LED1</text><polygon fill="#A80036" points="183.5,70.1201,193.5,74.1201,183.5,78.1201,187.5,74.1201" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="39.5" x2="189.5" y1="74.1201" y2="74.1201"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="132" x="46.5" y="70.0181">AT指令连接TCP服务器</text><polygon fill="#A80036" points="377.5,101.8745,387.5,105.8745,377.5,109.8745,381.5,105.8745" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="195.5" x2="383.5" y1="105.8745" y2="105.8745"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="170" x="202.5" y="101.7725">通过WIFI将数据转发到服务器</text><polygon fill="#A80036" points="206.5,133.6289,196.5,137.6289,206.5,141.6289,202.5,137.6289" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="200.5" x2="388.5" y1="137.6289" y2="137.6289"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="114" x="212.5" y="133.5269">连接成功，返回'OK'</text><polygon fill="#A80036" points="50.5,165.3833,40.5,169.3833,50.5,173.3833,46.5,169.3833" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="44.5" x2="194.5" y1="169.3833" y2="169.3833"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="49" x="56.5" y="165.2813">转发'OK'</text><polygon fill="#A80036" points="183.5,197.1377,193.5,201.1377,183.5,205.1377,187.5,201.1377" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="39.5" x2="189.5" y1="201.1377" y2="201.1377"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="78" x="46.5" y="197.0356">发送实时数据</text><polygon fill="#A80036" points="377.5,228.8921,387.5,232.8921,377.5,236.8921,381.5,232.8921" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="195.5" x2="383.5" y1="232.8921" y2="232.8921"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="78" x="202.5" y="228.79">转发实时数据</text><polygon fill="#A80036" points="400.5,260.6465,390.5,264.6465,400.5,268.6465,396.5,264.6465" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="394.5" x2="516.5" y1="264.6465" y2="264.6465"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="406.5" y="260.5444">打开网页</text><polygon fill="#A80036" points="505.5,292.4009,515.5,296.4009,505.5,300.4009,509.5,296.4009" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="389.5" x2="511.5" y1="296.4009" y2="296.4009"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="104" x="396.5" y="292.2988">网页显示实时数据</text><polygon fill="#A80036" points="400.5,324.1553,390.5,328.1553,400.5,332.1553,396.5,328.1553" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="394.5" x2="516.5" y1="328.1553" y2="328.1553"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="97" x="406.5" y="324.0532">点击开LED1按钮</text><polygon fill="#A80036" points="206.5,355.9097,196.5,359.9097,206.5,363.9097,202.5,359.9097" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="200.5" x2="388.5" y1="359.9097" y2="359.9097"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="73" x="212.5" y="355.8076">发送'LED1:1'</text><polygon fill="#A80036" points="50.5,387.6641,40.5,391.6641,50.5,395.6641,46.5,391.6641" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0;" x1="44.5" x2="194.5" y1="391.6641" y2="391.6641"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="73" x="56.5" y="387.562">转发'LED1:1'</text><polygon fill="#A80036" points="586,419.4185,596,423.4185,586,427.4185,590,423.4185" style="stroke: #A80036; stroke-width: 1.0;"></polygon><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="39.5" x2="592" y1="423.4185" y2="423.4185"></line><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="58" x="46.5" y="419.3164">打开LED1</text><!--
 @startuml
