@@ -147,7 +147,7 @@ open(`http://${HOST}:${HTTP_PORT}/tcp-page`)
 - [命名风格]()
 还没写~TODO。
 ## 声明
-保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：https://github.com/alwxkxk/sofe-and-hard。
+保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：https://github.com/alwxkxk/sofe-and-hard
 ## Part 3
 将会学习Linux,并研究如何将demo1部署到服务器里。开始[Part3阅读](../Part3/index.html)
 
