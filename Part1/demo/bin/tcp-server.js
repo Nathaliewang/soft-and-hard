@@ -10,11 +10,14 @@ const HOST = require('../config/config.js').HOST
 const moment = require('moment')
 const net = require('net')
 const TCP_PORT = require('../config/config.js').TCP_PORT
+//TCP服务器启动
 const server = net.createServer((socket) => {
+  //TCP客户端连接后，马上以ascii的形式返回字符串 OK 
   socket.write('OK\n', 'ascii')
-  // 暂时简单地将socket引出来
+  // 图了个方便，直接把最新的TCP客户端socket赋值给server.mySocket。
   server.mySocket = socket
   socket.myText = moment().format('hh:mm:ss ') + ' tcp 建立连接!\n'
+  // TCP客户端发来数据时执行代码：
   socket.on('data', function (data) {
     socket.myText += moment().format('hh:mm:ss ') + ' <--' + data + ' \n'
     // data 是buffer，需要转换为ascii
@@ -36,6 +39,7 @@ const server = net.createServer((socket) => {
         break
     }
   })
+  //TCP客户端断开连接时：
   socket.on('close', function () {
     socket.myText += moment().format('hh:mm:ss ') + ' tcp 断开连接!\n'
   })

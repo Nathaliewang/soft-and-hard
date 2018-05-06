@@ -6,6 +6,7 @@
  * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
  */
 
+ // 按键点击监听
 $('#openLed1').click(function () {
   $.post('/tcp-page/LED1', {LED1: '1'})
 })
@@ -22,6 +23,7 @@ $('#closeLed2').click(function () {
   $.post('/tcp-page/LED2', {LED2: '0'})
 })
 
+// 每500ms请求一次，获取状态并修改页面内容
 setInterval(() => {
   $.get('/tcp-page/text', (obj) => {
     $('#text').text(obj.text)
