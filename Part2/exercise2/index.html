@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
+    <script src="./javascripts/jquery-3.3.1.min.js"></script>
+    <script src="./javascripts/bootstrap.min.js"></script>
+    <script src="./javascripts/baidu-tongji.js"></script>
+</head>
+
+<body class="jumbotron">
+    <div>
+        <h1>软硬结合 <small>Part1 demo</small></h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">TCP服务器</div>
+                    <div class="panel-body">
+                        <p id="status">TCP socket 连接状态：false</p><textarea id="text" style="height:600px;width:100%;"></textarea></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">LED灯控制</div>
+                    <div class="panel-body">
+                        <p id="LED1Text">LED1:0</p>
+                        <div><button id="openLed1" type="button" class="btn btn-success">开LED1</button><button id="closeLed1" type="button" class="btn btn-warning">关LED1</button></div>
+                        <h5 class="page-header"></h5>
+                        <p id="LED2Text">LED:1</p>
+                        <div><button id="openLed2" type="button" class="btn btn-success">开LED2</button><button id="closeLed2" type="button" class="btn btn-warning">关LED2</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
