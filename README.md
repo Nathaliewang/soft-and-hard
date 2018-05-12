@@ -20,14 +20,12 @@
 - 我不生产水，我只是水的搬运工，别人已经写好的教程不再重复写，比如HTML的学习，nodejs的学习,linux学习等等，都会告诉你们怎么利用网络搜索需要自学的教程，此教程做的只是连珠成串。
 ## 教程目录 与 安排
 ### Part1
-[Part1 让项目运行](./Part1/index.html)
 整个项目介绍并让大家先简单地运行起来~ 包含ESP8622烧录固件，各环节自调与联调。
 - 前提：有一定硬件调试经验（USART串口调试，AT指令）
 - 成果：把Part1 的demo运行起来，实现本地WIFI下手机监控硬件。
 - 关键词：STM32、串口调试、AT指令、ESP8266、git、网络调试助手
 - 耗时：估计5到8小时
 ### Part2
-[Part2](./Part2/index.html)
 讲解Part1 demo，包含静态网页制作，express框架。
 - 成果：简单的网页开发与Nodejs应该能入门了，有能力修改出自己想要的页面效果。
 - 关键词：HTML、Javascript、CSS、Jquery、bootstrap、w3cschool、菜鸟教程、《深入浅出nodejs》、《七天学会NodeJS》、TCP服务器、express
