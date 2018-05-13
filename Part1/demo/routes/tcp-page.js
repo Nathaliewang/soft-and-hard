@@ -29,7 +29,7 @@ router.get('/LED2', function (req, res, next) {
 router.post('/LED1', function (req, res, next) {
   let status = tcpServer.mySocket ? !tcpServer.mySocket.destroyed : false
   if (status) {
-    let sendText = 'LED1:' + tcpServer.LED1 + '\n'
+    let sendText = 'LED1:' + req.body.LED1 + '\n'
     tcpServer.mySocket.write(sendText, 'ascii')
     tcpServer.mySocket.myText += moment().format('hh:mm:ss ') + ' --> ：' + sendText
   }
@@ -39,7 +39,7 @@ router.post('/LED1', function (req, res, next) {
 router.post('/LED2', function (req, res, next) {
   let status = tcpServer.mySocket ? !tcpServer.mySocket.destroyed : false
   if (status) {
-    let sendText = 'LED2:' + tcpServer.LED2 + '\n'
+    let sendText = 'LED2:' + req.body.LED2 + '\n'
     tcpServer.mySocket.write(sendText, 'ascii')
     tcpServer.mySocket.myText += moment().format('hh:mm:ss ') + ' --> ：' + sendText
   }
