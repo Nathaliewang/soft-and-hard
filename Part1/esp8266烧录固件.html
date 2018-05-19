@@ -228,7 +228,34 @@ code.language-yaml {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview   ">
-      <p>还在等待搬运中~</p>
+      <h1 class="mume-header" id="esp-01s-at%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95">ESP-01S AT固件烧录</h1>
+
+<p>结合安信可教程，与ESP官方文档来尝试。（文档实在是太乱了....本来我是想教大家从A文档看到怎么操作，从B文档看到怎么怎么操作，发现太麻烦了，完全是几个文档结合着来才行....我直接给出我的操作。）</p>
+<p>引用一下当年我学习时用的图片，这张好像是来源于原子的：<br>
+<img src="images\wf-esp8266%E7%AB%AF%E5%8F%A3.png?0.2835825370765548" alt=""><br>
+<img src="images\esp8266%E7%AB%AF%E5%8F%A3.png?0.8292539616223107" alt=""></p>
+<p>AT固件对应ESP-01S的位置：<br>
+<img src="images\esp-01%E5%AF%B9%E5%BA%94%E7%9A%84AT%E5%9B%BA%E4%BB%B61.png?0.31321862397022726" alt=""><br>
+<img src="images\esp-01%E5%AF%B9%E5%BA%94%E7%9A%84AT%E5%9B%BA%E4%BB%B62.png?0.6024022555207689" alt=""><br>
+<img src="images\esp-01%E5%AF%B9%E5%BA%94%E7%9A%84AT%E5%9B%BA%E4%BB%B63.png?0.27304136767997056" alt=""><br>
+<img src="images\esp-01%E5%AF%B9%E5%BA%94%E7%9A%84AT%E5%9B%BA%E4%BB%B64.png?0.8675049334573881" alt=""><br>
+烧录固件时先让GPIO0拉低，点击官方下载工具ESPFlashDownloadTool下载，再给模块上电。<br>
+下载完成后把GPIO0悬空，重新上电然后用串口调试助手调试AT指令,波特率仍是115200。<br>
+<img src="images\AT%E9%AA%8C%E8%AF%81.png?0.1495217638294124" alt=""></p>
+<p>参考文档：《ESP8266 SDK入门指南》、《ESP8266快速入门指南》、《ESP8266AT指令集》、《如何为 ESP 系列模组烧录固件》，《ESP8266系列模组用户手册》，前面三个文档可以从<a href="https://www.espressif.com/zh-hans/support/download/documents">乐鑫官网</a>，后面两个文档<a href="http://wiki.ai-thinker.com/esp8266">安信可ESP8266专题网</a>找到。</p>
+<h1 class="mume-header" id="nodemcu-at%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%BD%95">NodeMCU AT固件烧录</h1>
+
+<p>ESP-01S 本质上就是ESP8266+8MbitFlash。<br>
+NodeMCU 本质上就是ESP8266+32MbitFlash+USB转串口芯片。所以下载的时候，直接用USB线跟电脑相连（当然要安装对应的USB芯片驱动），调整下载位置。<br>
+我看了看原理图，NodeMCU的flash键是对应GPIO0。</p>
+<p>在烧录固件之前需要通过如下操作进入 NodeMCU 的固件烧录模式：</p>
+<ul>
+<li>按住 FLASH 按键（这里不松开）</li>
+<li>按下 RST 按键并松开</li>
+<li>松开 FLASH 按键</li>
+</ul>
+<p><img src="images\NodeMCU%E5%8E%9F%E7%90%86%E5%9B%BE.png?0.9050146672668855" alt=""><br>
+<img src="images\nodeMCU%E5%AF%B9%E5%BA%94%E7%9A%84AT%E5%9B%BA%E4%BB%B6%E4%BD%8D%E7%BD%AE.png?0.25668170304480875" alt=""></p>
 
       </div>
       
