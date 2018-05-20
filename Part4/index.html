@@ -228,34 +228,66 @@ code.language-yaml {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview   ">
-      <h1 class="mume-header" id="part-4">Part 4</h1>
+      <div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>▶︎</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#part-4">Part 4</a>
+<ul>
+<li><a href="#%E5%8F%AF%E8%A7%86%E5%8C%96echart">可视化——Echart</a>
+<ul>
+<li><a href="#%E4%BD%9C%E4%B8%9A">作业</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93mongodb">数据库——MongoDB</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a>
+<ul>
+<li><a href="#windows%E5%AE%89%E8%A3%85">windows安装</a></li>
+<li><a href="#linux%E5%AE%89%E8%A3%85">linux安装</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%A2%E6%88%B7%E7%AB%AFrobo-3t%E8%BF%9E%E6%8E%A5mongodb">使用可视化客户端Robo 3T连接MongoDB</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8mongoose%E6%8E%A7%E5%88%B6%E6%95%B0%E6%8D%AE%E5%BA%93">使用mongoose控制数据库</a></li>
+<li><a href="#%E4%BD%9C%E4%B8%9A-1">作业</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8D%8F%E8%AE%AE%E8%AE%A8%E8%AE%BA">协议讨论</a>
+<ul>
+<li><a href="#tcp">TCP</a></li>
+<li><a href="#http">HTTP</a></li>
+<li><a href="#WebScoket">WebScoket</a></li>
+<li><a href="#mqtt">MQTT</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="part-4">Part 4</h1>
 
 <p>这部分主要讨论可视化库（Echart），数据库（MongoDB），以及协议的讨论（TCP、HTTP、Websocket、MQTT）。</p>
 <h2 class="mume-header" id="%E5%8F%AF%E8%A7%86%E5%8C%96echart">可视化——Echart</h2>
 
 <p>可视化极其重要，一个炫丽的页面带来的冲击效果十分强烈。<strong>在项目的前期，外表远比性能要重要。</strong> Echart是百度开源的可视化库，效果在全世界范围内都属于好用，（当然文档相对还有些问题）。<br>
 先看看别人的效果：<br>
-<img src="images\%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%88%E6%9E%9C.png?0.25220388945334316" alt=""><br>
+<img src="images\%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%88%E6%9E%9C.png?0.0028476269283246314" alt=""><br>
 能不能打动买家的心，靠的就是前端。<br>
 当然，这么炫至少也要半年经验的前端工程师才能比较好地驾驭（我做的能比他们更炫，因为这个我也能做，而且我还能在这基础上引入3D模型，更炫。但涉及到公司的作品我就不放出来了），新手肯定是先从简单的开始。<br>
 我们假设要展示一条数据曲线，比如说我要看某传感器的实时数值（30秒内）。</p>
 <ol>
 <li>
 <p>首先我们先从学习官网教程，自己在本地跑一个最简demo。<br>
-<img src="images\echart%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B.png?0.23652782205836265" alt=""></p>
+<img src="images\echart%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B.png?0.6127809541099689" alt=""></p>
 </li>
 <li>
 <p>在Echart官方实例里挑一个,在线调整成自己喜欢的样式。<br>
-<img src="images\echart%E5%AE%98%E6%96%B9%E5%AE%9E%E4%BE%8B.png?0.9535665532179289" alt=""><br>
-<img src="images\echart%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95.png?0.21251100048523397" alt=""><br>
-<img src="images\echartAPI.png?0.9580030081970818" alt=""><br>
+<img src="images\echart%E5%AE%98%E6%96%B9%E5%AE%9E%E4%BE%8B.png?0.1781088789372205" alt=""><br>
+<img src="images\echart%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95.png?0.7319333725889263" alt=""><br>
+<img src="images\echartAPI.png?0.5707325915700872" alt=""><br>
 在实际使用时，echart就是不断地参考别人的例子，结合API文档，修改出自己想要的样式。</p>
 </li>
 <li>
 <p>在本地先模拟每秒钟接收到数据，实时更新Echart图表。<br>
-<img src="images\exercise1%20%E6%95%88%E6%9E%9C1.gif?0.10114164430151718" alt=""><br>
-<img src="images\exercise1%20%E6%95%88%E6%9E%9C2.gif?0.4411119761972344" alt=""><br>
-完整代码及代码说明参考<code>Part4/exercise1</code></p>
+<img src="images\exercise1%20%E6%95%88%E6%9E%9C1.gif?0.45595866747021674" alt=""><br>
+<img src="images\exercise1%20%E6%95%88%E6%9E%9C2.gif?0.9348188725490751" alt=""><br>
+完整代码及代码说明参考<code>Part4/exercise1</code>，大约一两天时间。</p>
 </li>
 </ol>
 <h3 class="mume-header" id="%E4%BD%9C%E4%B8%9A">作业</h3>
@@ -263,18 +295,84 @@ code.language-yaml {
 <ol>
 <li>用Echart折腾一个图表出来，学会怎么用。</li>
 </ol>
-<h2 class="mume-header" id="%E6%95%B0%E6%8D%AE%E5%BA%93mongodb">数据库——MongoDB</h2>
+<h2 class="mume-header" id="%E6%95%B0%E6%8D%AE%E5%BA%93mongodb%E6%9C%AA%E5%AE%8C%E6%88%90todo">数据库——MongoDB（未完成TODO）</h2>
 
-<h2 class="mume-header" id="%E5%8D%8F%E8%AE%AE%E8%AE%A8%E8%AE%BA">协议讨论</h2>
+<p>首先，我们要搞明白，为什么使用数据库？<br>
+上面Echart的例子可以看到，页面在一开始时是需要过去30秒的数据，这些数据当然是可以暂时少量地存在nodejs程序里，但如果是100万个数据，那么内存就不够用了，我们需要把数据存到硬盘里。<br>
+我们可以选择创建一个文件，不断地把数据存进去，用的时候再读取出来。这样做文件一般长成这个样子的：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># 时间 - 设备名 - 数据名 - 数据值</span>
+<span class="token punctuation">[</span>13/May/2018:06:26:31 +0800<span class="token punctuation">]</span> - 深圳XX大厦XX楼ABC主板 - A传感器 - 24.5
+<span class="token punctuation">[</span>13/May/2018:06:28:38 +0800<span class="token punctuation">]</span> - 广州XX学校XX楼EFG主板 - A传感器 - 26.5
+<span class="token punctuation">[</span>13/May/2018:06:30:44 +0800<span class="token punctuation">]</span> - 深圳XX大厦XX楼ABC主板 - A传感器 - 24.5
+<span class="token punctuation">[</span>13/May/2018:06:31:56 +0800<span class="token punctuation">]</span> - 广州XX学校XX楼EFG主板 - B传感器 - 24.5
+<span class="token comment"># ...后面省略千千万万条</span>
+</pre><p>当你想从中想显示A设备B数据在C时段的数据时，从这个文件里搜索你会选择go die。由于数据库里搜索某个数据很方便很快，所以一般会把这种数据存放到数据库里。而这种直接写文件的方式，虽然写入性能高于数据库，但是一般只会用来存放日志（log），当出现问题需要排查时查看最近的日志以定位问题。<br>
+关系型数据库杰出代表MySQL与非关系型数据库杰出代表<a href="https://www.mongodb.com/">MongoDB</a>，对于全栈开发人员来说，两个都是要学习的，两者分别有不同的应用场景。物联网应用一般较多使用后者。</p>
+<h3 class="mume-header" id="%E5%AE%89%E8%A3%85">安装</h3>
 
+<p><a href="https://www.mongodb.com/">MongoDB官网</a>去下载，注意我们使用3.4版本。（因为最新版本在使用mongoose控制时会出点问题，新手解决起来比较麻烦。）</p>
+<h4 class="mume-header" id="windows%E5%AE%89%E8%A3%85">windows安装</h4>
+
+<p>有些同学想先在windows下折腾一下mongodb，安装配置比linux要复杂一点：<br>
+<img src="images\windows%E5%AE%89%E8%A3%85mongodb.png?0.7092452981320461" alt=""><br>
+然后还要配置些东西，具体可看文档：<br>
+<img src="images\windows%E5%AE%89%E8%A3%85mongodb%202.png?0.854167333542903" alt=""><br>
+然后搜索mongodb教程，自学去，大约三四天时间。</p>
+<h4 class="mume-header" id="linux%E5%AE%89%E8%A3%85">linux安装</h4>
+
+<p><img src="images\%E5%AE%89%E8%A3%85mongodb.png?0.8255646901706164" alt=""><br>
+<img src="images\%E5%AE%89%E8%A3%85mongodb%202.png?0.31340505548174935" alt=""><br>
+按着文档来安装并运行。</p>
+<h3 class="mume-header" id="%E4%BD%BF%E7%94%A8%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%A2%E6%88%B7%E7%AB%AFrobo-3t%E8%BF%9E%E6%8E%A5mongodb">使用可视化客户端Robo 3T连接MongoDB</h3>
+
+<p>云服务器注意设置安全组对应放开端口，配置向外开放，让windows客户端也能连接到云服务器的数据库。TODO</p>
+<p>在Authentication 的 Auth Mechanism选择MONGODB-CR(旧版的验证机制)。<br>
+<img src="images\Robo%203T.png?0.0033280242565065787" alt=""></p>
+<h3 class="mume-header" id="%E4%BD%BF%E7%94%A8mongoose%E6%8E%A7%E5%88%B6%E6%95%B0%E6%8D%AE%E5%BA%93">使用mongoose控制数据库</h3>
+
+<p>nodejs里控制mongodb的模块一般使用<a href="https://github.com/Automattic/mongoose">mongoose</a>，我们尝试在demo1的基础上添加mongoose，把接收到的数据都存入到数据库，详情看<code>sofe-and-hard-server/Part4/demo1.2</code>（为了更方便部署在服务器，所以特意将服务器部分的代码放到另一个项目）。TODO</p>
+<h3 class="mume-header" id="%E4%BD%9C%E4%B8%9A-1">作业</h3>
+
+<ol>
+<li></li>
+</ol>
+<h2 class="mume-header" id="%E9%80%9A%E8%AE%AF%E5%8D%8F%E8%AE%AE%E8%AE%A8%E8%AE%BA%E6%9C%AA%E5%AE%8C%E6%88%90todo">通讯协议讨论（未完成TODO）</h2>
+
+<p>先看《计算机网络》（谢希仁作）,先大概学习TCP/IP的基础知识。然后结合经典书籍《TCP/IP详解 卷一》一起学习。<br>
+现在我们来讨论一下通讯协议，TCP协议是基础，需要通过抓包来学习。有了TCP基础后，我们讨论一下HTTP，Websocket，MQTT协议。</p>
 <h3 class="mume-header" id="tcp">TCP</h3>
 
+<p>我们直接通过抓包，来看看TCP到底传输了什么数据。</p>
+<h5 class="mume-header" id="linux%E4%B8%8B%E7%9A%84tcpdump">linux下的tcpdump</h5>
+
+<p>linux下使用tcpdump，tcpdump的数据可以下载到windows本地来用wireshark加载以方便阅读。</p>
+<h5 class="mume-header" id="windows%E4%B8%8B%E7%9A%84wireshark">windows下的wireshark</h5>
+
+<p>windows下可以使用图形化工具wireshark。</p>
 <h3 class="mume-header" id="http">HTTP</h3>
 
-<h3 class="mume-header" id="webscoket">Webscoket</h3>
+<h4 class="mume-header" id="cookies-%E4%B8%8E-session">cookies 与 session</h4>
 
+<h3 class="mume-header" id="webscoket">WebScoket</h3>
+
+<p>搜索WebScoket，你就能发现很多文章讨论WebScoket的原理，优点以及相比于HTTP轮询（AJAX轮询）的优势。</p>
+<h4 class="mume-header" id="socketio%E7%9A%84%E4%BD%BF%E7%94%A8">socketio的使用</h4>
+
+<p>注意socketio不是WebScoket的服务器，而是进行了封装（如自动重连，若不支持WebScoket协议则自动使用HTTP轮询代替），要想通过抓包研究WebScoket，请使用<a href="https://github.com/websockets/ws">ws模块</a>搭建WebScoket服务器进行抓包研究。</p>
 <h3 class="mume-header" id="mqtt">MQTT</h3>
 
+<h3 class="mume-header" id="%E4%BD%9C%E4%B8%9A-2">作业</h3>
+
+<ul>
+<li>搞明白WebScoket相对于HTTP轮询的优势。</li>
+</ul>
+<h2 class="mume-header" id="%E6%89%A9%E5%B1%95">扩展</h2>
+
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc2616">HTTP协议规范 RCF2646</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6455">WebScoket协议规范 RFC6455</a></li>
+<li>RESTful设计风格</li>
+</ul>
 
       </div>
       
