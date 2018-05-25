@@ -5,18 +5,25 @@
 * [Part 4](#part-4)
 	* [可视化——Echart](#可视化echart)
 		* [作业](#作业)
-	* [数据库——MongoDB](#数据库mongodb)
+	* [数据库——MongoDB（未完成TODO）](#数据库mongodb未完成todo)
 		* [安装](#安装)
 			* [windows安装](#windows安装)
 			* [linux安装](#linux安装)
 		* [使用可视化客户端Robo 3T连接MongoDB](#使用可视化客户端robo-3t连接mongodb)
 		* [使用mongoose控制数据库](#使用mongoose控制数据库)
 		* [作业](#作业-1)
-	* [协议讨论](#协议讨论)
+	* [通信协议讨论（未完成TODO）](#通信协议讨论未完成todo)
 		* [TCP](#tcp)
+				* [linux下的tcpdump](#linux下的tcpdump)
+				* [windows下的wireshark](#windows下的wireshark)
+				* [自定义TCP协议](#自定义tcp协议)
 		* [HTTP](#http)
-		* [WebScoket](#WebScoket)
+			* [cookies 与 session](#cookies-与-session)
+		* [WebScoket](#webscoket)
+			* [socketio的使用](#socketio的使用)
 		* [MQTT](#mqtt)
+		* [作业](#作业-2)
+	* [扩展](#扩展)
 
 <!-- /code_chunk_output -->
 # Part 4 
@@ -61,7 +68,7 @@
 当你想从中想显示A设备B数据在C时段的数据时，从这个文件里搜索你会选择go die。由于数据库里搜索某个数据很方便很快，所以一般会把这种数据存放到数据库里。而这种直接写文件的方式，虽然写入性能高于数据库，但是一般只会用来存放日志（log），当出现问题需要排查时查看最近的日志以定位问题。
 关系型数据库杰出代表MySQL与非关系型数据库杰出代表[MongoDB](https://www.mongodb.com/)，对于全栈开发人员来说，两个都是要学习的，两者分别有不同的应用场景。物联网应用一般较多使用后者。
 ### 安装
-[MongoDB官网](https://www.mongodb.com/)去下载，注意我们使用3.4版本。（因为最新版本在使用mongoose控制时会出点问题，新手解决起来比较麻烦。）
+[MongoDB官网](https://www.mongodb.com/)去下载，注意使用稳定版本即可。
 #### windows安装
 有些同学想先在windows下折腾一下mongodb，安装配置比linux要复杂一点：
 @import "./images/windows安装mongodb.png"
@@ -83,16 +90,18 @@ nodejs里控制mongodb的模块一般使用[mongoose](https://github.com/Automat
 ### 作业
 1. 
 
-## 通讯协议讨论（未完成TODO）
+## 通信协议讨论（未完成TODO）
 先看《计算机网络》（谢希仁作）,先大概学习TCP/IP的基础知识。然后结合经典书籍《TCP/IP详解 卷一》一起学习。
-现在我们来讨论一下通讯协议，TCP协议是基础，需要通过抓包来学习。有了TCP基础后，我们讨论一下HTTP，Websocket，MQTT协议。
+现在我们来讨论一下通信协议，TCP协议是基础，需要通过抓包来学习。有了TCP基础后，我们讨论一下HTTP，Websocket，MQTT协议。
 ### TCP
 我们直接通过抓包，来看看TCP到底传输了什么数据。
 ##### linux下的tcpdump
 linux下使用tcpdump，tcpdump的数据可以下载到windows本地来用wireshark加载以方便阅读。
 ##### windows下的wireshark
 windows下可以使用图形化工具wireshark。
-
+##### 自定义TCP协议
+我们用假设法来定义一下自己的TCP通信协议。
+再TLV格式来定义一下。
 ### HTTP
 #### cookies 与 session
 
@@ -109,4 +118,3 @@ windows下可以使用图形化工具wireshark。
 ## 扩展
 - [HTTP协议规范 RCF2646](https://tools.ietf.org/html/rfc2616)
 - [WebScoket协议规范 RFC6455](https://tools.ietf.org/html/rfc6455)
-- RESTful设计风格
