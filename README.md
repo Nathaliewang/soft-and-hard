@@ -28,23 +28,20 @@
 - 前提：有一定硬件调试经验（USART串口调试，AT指令）
 - 成果：把Part1 的demo运行起来，实现本地WIFI下手机监控硬件。
 - 关键词：STM32、串口调试、AT指令、ESP8266、git、网络调试助手
-- 耗时：估计5到8小时
+
 ### Part2
 讲解Part1 demo，包含静态网页制作，express框架。
 - 成果：简单的网页开发与Nodejs应该能入门了，有能力修改出自己想要的页面效果。
 - 关键词：HTML、Javascript、CSS、Jquery、bootstrap、w3cschool、菜鸟教程、《深入浅出nodejs》、《七天学会NodeJS》、TCP服务器、express
-- 耗时：自学网页开发（估计5到8天），自学nodejs（估计5到10天），共估计10到20天差不多能入个门。__1天按8到12个小时来计算（超高强度），下面同理__
 ### Part3
 将Part1 demo运行在云服务器上，主要是学习linux（ubuntu），云服务器各种折腾。
 - 成果：Linux初步入门、部署到云服务器上，此时真正实现远程监控硬件。
 - 关键词：ubuntu、云服务器、vi、《鳥哥的 Linux 私房菜》、bash、Xshell、winSCP
-- 耗时：自学linux估计5到10天左右能入个门。
 ### Part4
 引入mongoDB数据库，将数据保存到数据库里，并将历史数据可视化。  
 （可选学）并讲一些协议，包含TCP协议(讲一下基于TCP自定义自己的协议规则)，HTTP协议，websocket协议。然后会进行优化，如把HTTP轮询换成websocket协议。
 - 成果：完成Part4 demo，数据可视化会让整个效果更炫，增加实时性，这个物联网项目基本成型。
 - 关键词：《计算机网络》、tcpdump、wireshark、《TCP/IP详解》、socketio库、echart库、TLV格式
-- 耗时：数据可视化几个小时入个门，数据库估计2天入门，协议简单地点一下1天，要想跟着继续深入可能要多花几天。整个可能需要5到10天吧。
 ### Part5
 Part5及往后看阅读情况写吧。
 各种性能测试与优化，ESP8266的AT固件改成自己编译的固件（这个蛮难搞的），说一下各物联网平台。
