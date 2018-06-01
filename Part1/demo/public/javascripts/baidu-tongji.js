@@ -3,7 +3,7 @@
  * 作者：alwxkxk
  * 修改时间：2018/04/29
  * 描述：百度统计代码
- * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
+ * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/soft-and-hard
  */
 var _hmt = _hmt || [];
 (function () {

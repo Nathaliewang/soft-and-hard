@@ -172,7 +172,7 @@ open(`http://${HOST}:${HTTP_PORT}/tcp-page`)
 我用[standard](https://github.com/standard/standard)作为我的代码检查工具。
 - 了解与对比新三大前端框架Vue、React、Angularjs
 ## 声明
-保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：https://github.com/alwxkxk/sofe-and-hard
+保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：https://github.com/alwxkxk/soft-and-hard
 ## Part 3
 将会学习Linux,并研究如何将demo1部署到服务器里。开始[Part3阅读](../Part3/index.html)
 

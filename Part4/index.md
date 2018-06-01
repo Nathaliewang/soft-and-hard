@@ -86,7 +86,7 @@
 @import "./images/Robo 3T.png"
 
 ### 使用mongoose控制数据库
-nodejs里控制mongodb的模块一般使用[mongoose](https://github.com/Automattic/mongoose)，我们尝试在demo1的基础上添加mongoose，把接收到的数据都存入到数据库，详情看`sofe-and-hard-server/Part4/demo1.2`（为了更方便部署在服务器，所以特意将服务器部分的代码放到另一个项目）。TODO
+nodejs里控制mongodb的模块一般使用[mongoose](https://github.com/Automattic/mongoose)，我们尝试在demo1的基础上添加mongoose，把接收到的数据都存入到数据库，详情看`soft-and-hard-server/Part4/demo1.2`（为了更方便部署在服务器，所以特意将服务器部分的代码放到另一个项目）。TODO
 ### 作业
 - 使用图形化工具远程连接数据库（需要配置数据库，并开放安全组端口）
 - （扩展）尝试备份恢复数据库

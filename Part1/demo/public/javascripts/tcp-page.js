@@ -3,7 +3,7 @@
  * 作者：alwxkxk
  * 修改时间：2018/04/30
  * 描述：tcp-page页面 的js脚本
- * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/sofe-and-hard
+ * 整个教程在不断迭代更新中，最新教程获取：https://github.com/alwxkxk/soft-and-hard
  */
 
  // 按键点击监听

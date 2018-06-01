@@ -106,7 +106,7 @@ sudo apt-get install -y nodejs
 
 为了方便部署，特意将服务器的代码分隔到另一个github项目（这样就不用下载一堆图片与其它无关的东西）。
 登陆云服务器，安装git，`sudo apt-get install -y git`
-下载服务器代码`git clone https://github.com/alwxkxk/sofe-and-hard-server.git`
+下载服务器代码`git clone https://github.com/alwxkxk/soft-and-hard-server.git`
 进入Part1/demo 安装依赖`npm install`，修改配置文件`vi ./config/config.js`，然后运行`npm start`。
 
 云服务器的内网IP地址在服务器平台可以看到，也可以执行`ifconfig`找到。

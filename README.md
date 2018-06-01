@@ -1,4 +1,4 @@
-# sofe-and-hard
+# soft-and-hard
 《软硬结合——写给硬件开发工程师的全栈入门实战》，软硬件结合可以说是所有硬件开发人员心中的一大追求，当一个人技能树上点亮了软硬件，所有创意想法基本都能靠自己去实现。整个教程与源码都是免费公开的，但不允许别人通过这教程赚钱，我就赚个人气~
 
 ## 起源
@@ -8,7 +8,7 @@
 1. 百度git 并运行安装
 ![百度git 并运行安装示意图](http://ww1.sinaimg.cn/large/005BIQVbgy1fqtnovsgrmj31hc0qdjxv.jpg)
 2. 在桌面上右键点击 `git bash Here`
-3. `git clone https://github.com/alwxkxk/sofe-and-hard.git`
+3. `git clone https://github.com/alwxkxk/soft-and-hard.git`
 4. 可以看到下载了一个文件夹，进去点击`第一次阅读.html`
 5. 整个教程在不断更新中，进入文件并运行`git pull`即可更新。
 ![git clone示意](http://ww1.sinaimg.cn/large/005BIQVbgy1fqtnqg91l9g31h30rmu0z.gif)
@@ -50,6 +50,6 @@ Part5及往后看阅读情况写吧。
 使用electron开发PC桌面软件，使用ionic开发手机APP。
 - 关键词：electron、ionic
 ## 声明
-保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：https://github.com/alwxkxk/sofe-and-hard。
+保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：https://github.com/alwxkxk/soft-and-hard。
 
 
