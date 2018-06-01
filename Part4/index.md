@@ -51,7 +51,7 @@
 @import "./images/exercise1 效果2.gif"
 完整代码及代码说明参考`Part4/exercise1`，大约一两天时间。
 ### 作业
-1. 用Echart折腾一个图表出来，学会怎么用。
+- 用Echart折腾一个图表出来，学会怎么用。
 
 ## 数据库——MongoDB（未完成TODO）
 首先，我们要搞明白，为什么使用数据库？  
@@ -88,7 +88,8 @@
 ### 使用mongoose控制数据库
 nodejs里控制mongodb的模块一般使用[mongoose](https://github.com/Automattic/mongoose)，我们尝试在demo1的基础上添加mongoose，把接收到的数据都存入到数据库，详情看`sofe-and-hard-server/Part4/demo1.2`（为了更方便部署在服务器，所以特意将服务器部分的代码放到另一个项目）。TODO
 ### 作业
-1. 
+- 使用图形化工具远程连接数据库（需要配置数据库，并开放安全组端口）
+- （扩展）尝试备份恢复数据库
 
 ## 通信协议讨论（未完成TODO）
 先看《计算机网络》（谢希仁作）,先大概学习TCP/IP的基础知识。然后结合经典书籍《TCP/IP详解 卷一》一起学习。
