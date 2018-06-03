@@ -73,6 +73,7 @@ note left of 需要做什么 :只要硬件能通讯部分跟网络调试助手�
 @import "./images/验证nodejs安装成功.png"
 这个验证很常见，有两个用途：1.程序安装成功。2.环境变量（PATH） 设置正确。
 ### 启动服务器程序
+注意使用chrome浏览器，暂时已经发现360浏览器内核太旧无法支持新版的JQuery而报错。[FAQ #1](../FAQ.html)
 1. 获取内网IPv4地址，在cmd里输入`ipconfig`，找到内网IPv4址。
 @import "./images/获取内网IP地址.png"
 2. 修改配置文件`Part1/demo/config/config.js`，将你的内网IPv4地址填入HOST。
