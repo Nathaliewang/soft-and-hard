@@ -30,3 +30,5 @@
 ..\output\main.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
 ..\output\main.o: ..\User\Hal_led.h
 ..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\main.o: ..\User\bsp_usart.h
+..\output\main.o: ..\User\bsp_GENERALTim.h

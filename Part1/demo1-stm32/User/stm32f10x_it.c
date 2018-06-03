@@ -13,7 +13,9 @@
   * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
   * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
   * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
-  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+  * DIRECT, INDIRECT OR CONSEQUENTI
+  
+  AL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
   * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
   * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
   *
@@ -23,6 +25,11 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
+#include "bsp_GeneralTim.h" 
+
+
+extern volatile uint32_t time;
+
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -142,6 +149,20 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f10x_xx.s).                                            */
 /******************************************************************************/
+
+/**
+  * @brief  This function handles TIM2 interrupt request.
+  * @param  None
+  * @retval None
+  */
+void  GENERAL_TIM_IRQHandler (void)
+{
+	if ( TIM_GetITStatus( GENERAL_TIM, TIM_IT_Update) != RESET ) 
+	{	
+		time++;
+		TIM_ClearITPendingBit(GENERAL_TIM , TIM_FLAG_Update);  		 
+	}		 	
+}
 
 /**
   * @brief  This function handles PPP interrupt request.
