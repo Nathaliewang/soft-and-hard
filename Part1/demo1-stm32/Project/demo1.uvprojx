@@ -576,6 +576,16 @@
               <FileType>1</FileType>
               <FilePath>..\User\Hal_led.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\bsp_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_GeneralTim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\bsp_GeneralTim.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -26,7 +26,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 #include "bsp_GeneralTim.h" 
-
+#include "bsp_usart.h" 
 
 extern volatile uint32_t time;
 
@@ -164,6 +164,28 @@ void  GENERAL_TIM_IRQHandler (void)
 	}		 	
 }
 
+// 串口中断服务函数
+//将串口一接收的数据发送到串口二
+void DEBUG_USART_IRQHandler(void)
+{
+  uint8_t ucTemp;
+	if(USART_GetITStatus(DEBUG_USART1,USART_IT_RXNE)!=RESET)
+	{		
+		ucTemp = USART_ReceiveData(DEBUG_USART1);
+    USART_SendData(DEBUG_USART2,ucTemp);    
+	}	 
+}
+
+//将串口二接收的数据发送到串口一
+void DEBUG_USART2_IRQHandler(void)
+{
+  uint8_t ucTemp;
+	if(USART_GetITStatus(DEBUG_USART2,USART_IT_RXNE)!=RESET)
+	{		
+		ucTemp = USART_ReceiveData(DEBUG_USART2);
+    USART_SendData(DEBUG_USART1,ucTemp);    
+	}	 
+}
 /**
   * @brief  This function handles PPP interrupt request.
   * @param  None

@@ -23,17 +23,19 @@ int main(void)
 	LED_OFF(LED4);
 	  /*初始化USART 配置模式为 115200 8-N-1，中断接收*/
   USART_Config();
+	USART2_Config();
 	GENERAL_TIM_Init();
 	/* 发送一个字符串 */
-	Usart_SendString( DEBUG_USARTx,"这是一个串口中断接收回显实验\n");
-	
+	Usart_SendString( DEBUG_USART1,"串口一通信验证\n");
+	Usart_SendString( DEBUG_USART2,"串口二通信验证\n");
+
   while(1)
 	{	
 		if ( time == 1000 ) /* 1000 * 1 ms = 1s 时间到 */
     {
       time = 0;
-			/* LED1 取反 */      
-			printf("欢迎使用秉火STM32开发板\n");
+			Usart_SendString( DEBUG_USART2,"串口二\n");
+			printf("欢迎发板\n");
     }        
 	}	
 	
