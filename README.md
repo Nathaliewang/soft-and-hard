@@ -47,8 +47,8 @@ Part5及往后看阅读情况写吧。
 各种性能测试与优化，ESP8266的AT固件改成自己编译的固件（这个蛮难搞的），说一下各物联网平台。
 - 关键词：redis、nginx、CDN
 ### Part6
-使用electron开发PC桌面软件，使用ionic开发手机APP。
-- 关键词：electron、ionic
+使用electron开发PC桌面软件，使用cordova开发手机APP。
+- 关键词：electron、cordova
 ## 声明
 保留一切权利，禁止商业转载，非商业转载时必须保留此声明与网址：https://github.com/alwxkxk/soft-and-hard。
 
