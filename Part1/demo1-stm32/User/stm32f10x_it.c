@@ -27,9 +27,14 @@
 #include "stm32f10x_it.h"
 #include "bsp_GeneralTim.h" 
 #include "bsp_usart.h" 
+#include "ESP8266.h" 
+#include "bsp_adc.h"
 
+#include <stdio.h>	
+#include <string.h>
 extern volatile uint32_t time;
-
+extern volatile char receiveStr[255];
+extern __IO uint16_t ADC_ConvertedValue;
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -180,12 +185,28 @@ void DEBUG_USART_IRQHandler(void)
 void DEBUG_USART2_IRQHandler(void)
 {
   uint8_t ucTemp;
+	char str[2];
 	if(USART_GetITStatus(DEBUG_USART2,USART_IT_RXNE)!=RESET)
 	{		
 		ucTemp = USART_ReceiveData(DEBUG_USART2);
+		str[0] =(char) ucTemp;
+		str[1] = '\0';
+		strcat((char *)receiveStr,str);
     USART_SendData(DEBUG_USART1,ucTemp);    
 	}	 
 }
+
+void ADC_IRQHandler(void)
+{	
+	if (ADC_GetITStatus(ADCx,ADC_IT_EOC)==SET) 
+	{
+		// 读取ADC的转换值
+		ADC_ConvertedValue = ADC_GetConversionValue(ADCx);
+	}
+	ADC_ClearITPendingBit(ADCx,ADC_IT_EOC);
+}
+
+
 /**
   * @brief  This function handles PPP interrupt request.
   * @param  None

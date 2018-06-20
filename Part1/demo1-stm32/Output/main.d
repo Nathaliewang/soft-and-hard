@@ -32,3 +32,5 @@
 ..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\output\main.o: ..\User\bsp_usart.h
 ..\output\main.o: ..\User\bsp_GENERALTim.h
+..\output\main.o: ..\User\ESP8266.h
+..\output\main.o: ..\User\bsp_adc.h

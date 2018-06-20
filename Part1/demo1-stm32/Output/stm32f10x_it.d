@@ -32,3 +32,6 @@
 ..\output\stm32f10x_it.o: ..\User\bsp_GeneralTim.h
 ..\output\stm32f10x_it.o: ..\User\bsp_usart.h
 ..\output\stm32f10x_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\stm32f10x_it.o: ..\User\ESP8266.h
+..\output\stm32f10x_it.o: ..\User\bsp_adc.h
+..\output\stm32f10x_it.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
