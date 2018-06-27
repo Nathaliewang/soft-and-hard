@@ -28,7 +28,7 @@
 - 前提：有一定硬件调试经验（USART串口调试，AT指令）
 - 目标：把Part1 的demo运行起来，实现本地WIFI下手机监控硬件。
 - 关键词：STM32、串口调试、AT指令、ESP8266、git、网络调试助手
-![Part1 效果图](http://ww1.sinaimg.cn/large/005BIQVbgy1fshvsmd56rg30mc0clb2m.gif)
+
 
 ### Part2
 讲解Part1 demo，包含静态网页制作，express框架。
