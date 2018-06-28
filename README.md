@@ -7,7 +7,7 @@
 ## 如何开始
 1. 在github上点击下载，并解压
 ![在github上下载](http://ww1.sinaimg.cn/large/005BIQVbgy1fsr38x82u2j31hc0t4adw.jpg)
-2. 打开文件夹，点击`第一次阅读.html`
+2. 打开文件夹，点击`第一次阅读.html`。
 3. Part1内容：点击`Part1/index.html`正式开始阅读，其它部分同理。
 
 学习过git：
