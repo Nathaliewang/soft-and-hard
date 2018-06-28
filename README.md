@@ -5,15 +5,14 @@
 2017年毕业时做的毕业设计是一个物联网项目，硬件上是STM32+ESP8266，自己搭服务器（nodejs+mongodb），客户端做网站做微信小程序（我觉得我是第一个用微信小程序做毕设的人），打算将这个项目重构并写出教程，针对硬件开发人员写的全栈应用开发入门实战。2018年开始写这教程时，我的水平是不足一年工作经难的初级全栈工程师+ 略懂硬件开发。
 由于整个教程在缓慢更新中，会有不少问题，欢迎进Q群交流：__638456092__。
 ## 如何开始
-1. 百度git 并运行安装
-![百度git 并运行安装示意图](http://ww1.sinaimg.cn/large/005BIQVbgy1fqtnovsgrmj31hc0qdjxv.jpg)
-2. 在桌面上右键点击 `git bash Here`
-3. `git clone https://github.com/alwxkxk/soft-and-hard.git`
-4. 可以看到下载了一个文件夹，进去点击`第一次阅读.html`
-5. 整个教程在不断更新中，进入文件并运行`git pull`即可更新。
-![git clone示意](http://ww1.sinaimg.cn/large/005BIQVbgy1fqtnqg91l9g31h30rmu0z.gif)
-6. 之后就进入到Part1 点击`index.html`正式开始阅读。
+1. 在github上点击下载，并解压
+![在github上下载](http://ww1.sinaimg.cn/large/005BIQVbgy1fsr38x82u2j31hc0t4adw.jpg)
+2. 打开文件夹，点击`第一次阅读.html`
+3. Part1内容：点击`Part1/index.html`正式开始阅读，其它部分同理。
 
+学习过git：
+因为整个教程在不断更新中，进入文件并运行`git pull`即可更新。
+![git clone示意](http://ww1.sinaimg.cn/large/005BIQVbgy1fqtnqg91l9g31h30rmu0z.gif)
 ## 教程特点
 - 整个项目部署运行傻瓜式地教，保证整个项目能在读者手上运行起来。
 - 尽可能地解答会卡住大家继续项目走下去的所有问题。
@@ -31,6 +30,8 @@ Part3 | 基本完成 |有待优化
 Part4 | 正在做 | 
 Part5 | 还没计划 | 
 Part6 | 还没计划 | 
+
+虽然整个教程没有完成，要点已经列出来，并不影响你们提前学习~
 ### Part1
 整个项目介绍并让大家先简单地运行起来~ 包含ESP8622烧录固件，各环节自调与联调。
 - 前提：有一定硬件调试经验（USART串口调试，AT指令）
