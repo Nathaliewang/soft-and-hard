@@ -233,26 +233,13 @@ code.language-yaml {
 <ul>
 <li><a href="#%E4%BD%9C%E8%80%85%E6%B0%B4%E5%B9%B3">作者水平</a></li>
 <li><a href="#%E8%AF%BB%E8%80%85%E6%B0%B4%E5%B9%B3%E8%A6%81%E6%B1%82">读者水平要求</a></li>
-<li><a href="#%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">整个项目简单介绍</a></li>
+<li><a href="#%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D">整个项目简单介绍</a>
+<ul>
+<li><a href="#demo1%E6%95%88%E6%9E%9C">demo1效果</a></li>
+</ul>
+</li>
 <li><a href="#%E6%95%99%E7%A8%8B%E7%89%B9%E7%82%B9">教程特点</a></li>
 <li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8nodejs">为什么使用nodejs</a></li>
-<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
-<li><a href="#%E6%8F%90%E9%97%AE">提问</a>
-<ul>
-<li><a href="#%E6%8F%90%E9%97%AE%E4%B9%8B%E5%89%8D">提问之前</a></li>
-<li><a href="#%E6%8F%90%E9%97%AE%E8%A7%84%E8%8C%83">提问规范</a></li>
-</ul>
-</li>
-<li><a href="#%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95-%E4%B8%8E-%E5%AE%89%E6%8E%92">教程目录 与 安排</a>
-<ul>
-<li><a href="#part1">Part1</a></li>
-<li><a href="#part2">Part2</a></li>
-<li><a href="#part3">Part3</a></li>
-<li><a href="#part4">Part4</a></li>
-<li><a href="#part5">Part5</a></li>
-<li><a href="#part6">Part6</a></li>
-</ul>
-</li>
 <li><a href="#%E9%A2%98%E5%A4%96%E8%AF%9D">题外话</a></li>
 <li><a href="#%E5%A3%B0%E6%98%8E">声明</a></li>
 <li><a href="#%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%A7%8B">正式开始</a></li>
@@ -268,7 +255,7 @@ code.language-yaml {
 <p>2017年毕业时做的毕业设计是一个物联网项目，硬件上是STM32+ESP8266，自己搭服务器（nodejs+mongodb），客户端做网站、做微信小程序（我觉得我是第一个用微信小程序做毕设的人），ESP8266与服务器之间的通信是基于websocket的（这个编译固件很麻烦），打算将这个项目重构并写出教程，针对硬件开发人员写的全栈应用开发入门实战。2018年开始写这教程时，我的水平是毕业不足一年，是初级全栈工程师（不足一年经验）+ 略懂硬件开发，经验并不是很足，但我怕再不写以后就更没时间写了，若发现有任何问题一定要提Issues。</p>
 <ul>
 <li>毕设PPT截图：<br>
-<img src="images\%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE.png?0.2713739146467984" alt=""></li>
+<img src="images\%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE.png?0.007938147658312023" alt=""></li>
 </ul>
 <h2 class="mume-header" id="%E8%AF%BB%E8%80%85%E6%B0%B4%E5%B9%B3%E8%A6%81%E6%B1%82">读者水平要求</h2>
 
@@ -297,106 +284,86 @@ ESP8266 -> 主控板 : 转发开灯指令
 PlantUML version 1.2018.01(Mon Jan 29 02:08:22 CST 2018)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
-JVM: Java HotSpot(TM) Client VM
-Java Version: 1.8.0_161-b12
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_171-b11
 Operating System: Windows 10
 OS Version: 10.0
 Default Encoding: GBK
 Language: zh
 Country: CN
---></g></svg></p><h2 class="mume-header" id="%E6%95%99%E7%A8%8B%E7%89%B9%E7%82%B9">教程特点</h2>
+--></g></svg></p><h3 class="mume-header" id="demo1%E6%95%88%E6%9E%9C">demo1效果</h3>
+
+<p><img src="Part1\images\demo1-stm32%E6%95%88%E6%9E%9C%E5%9B%BE.gif?0.7726070376067911" alt=""></p>
+<h2 class="mume-header" id="%E6%95%99%E7%A8%8B%E7%89%B9%E7%82%B9">教程特点</h2>
 
 <ul>
 <li>整个项目部署运行傻瓜式地教，保证整个项目能在读者手上运行起来。</li>
 <li>尽可能地解答会卡住大家继续项目走下去的所有问题。</li>
-<li>我不生产水，我只是水的搬运工，别人已经写好的教程不再重复写，比如HTML的学习，nodejs的学习,linux学习等等，都会告诉你们怎么利用网络搜索需要自学的教程，__眼前有景道不得，崔颢题诗在上头。__此教程做的只是连珠成串，<strong>此教程重点在于点明方向，告诉你将要学习的东西</strong>。</li>
-<li><strong>要学习的东西千千万万，唯一不变的是搜索。</strong> 整个教程，我不会直接告诉你答案，而是反反复复地使用搜索引擎去示范，我是怎么通过搜索找到我想要的答案。培养解决问题的能力十分重要。</li>
+<li>我不生产水，我只是水的搬运工，别人已经写好的教程不再重复写，比如HTML的学习，nodejs的学习,linux学习等等，都会告诉你们怎么利用网络搜索需要自学的教程，__眼前有景道不得，崔颢题诗在上头。__此教程做的只是连珠成串，<strong>此教程重点在于点明方向，告诉你将要学习的东西</strong>。这一教程将会指引你学习十几本书....<br>
+<img src="images\%E3%80%8A%E8%BD%AF%E7%A1%AC%E7%BB%93%E5%90%88%E3%80%8B%E6%89%80%E9%9C%80%E8%A6%81%E8%87%AA%E5%AD%A6%E7%9A%84%E4%B9%A6%E7%B1%8D%E4%B8%8E%E6%95%99%E7%A8%8B.png?0.9643296964394177" alt=""></li>
+<li><strong>要学习的东西千千万万，唯一不变的是搜索。</strong> 整个教程，我不会直接告诉你答案，而是反反复复地使用搜索引擎去示范，我是怎么通过搜索找到我想要的答案。培养解决问题的能力十分重要。<br>
+<img src="images\%E7%9B%B4%E6%8E%A5%E6%90%9C%E7%B4%A2.png?0.4233440475106993" alt=""></li>
 <li>教程涉及的内容十分广，如果是去培训班估计也要培训几个月，学起来会有一种“炸”的感觉，大家切记，不要深究难点，多用笔记软件来记录。<strong>因为要做某件事，所以我要学习某个知识点，进而解决某个问题</strong> 暂时用不到的只需要知道有这东西存在，知道它能解决什么问题即可</li>
 <li><strong>先用后学</strong>，一开始不必搞懂所有概念，先用起来，知道是有什么效果的，然后再学习。</li>
 <li>这个教程会随着读者的提问，反思是哪个环节内容不足，然后不断补充内容。也会随着我能力的提升，不断增加教程里的内容。</li>
 </ul>
 <h2 class="mume-header" id="%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8nodejs">为什么使用nodejs</h2>
 
-<p>因为实现全栈的最低学习成本的语言是javascript，一门javascript搞定网页，PC端软件，后台服务器，手机APP的开发。不用学PHP，不用学C#，不用学JAVA~</p>
-<h2 class="mume-header" id="%E5%BC%80%E5%A7%8B">开始</h2>
+<p>因为实现全栈的最低学习成本的语言是 <strong>javascript</strong>，一门语言javascript搞定网页，PC端软件，后台服务器，手机APP的开发。不用学PHP，不用学C#，不用学JAVA~<br>
+人的精力是有限的，切换语言是需要精力的，javascript虽然在各场景不是最好的语言，但是对于一个人负责全部来说却是 <strong>最低成本的！</strong></p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>本教程所用语言</th>
+<th>其它语言</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>网页制作</td>
+<td>HTML、CSS、<strong>JavaScript</strong></td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>PC端软件.exe</td>
+<td>HTML、CSS、<strong>JavaScript</strong> + Electron</td>
+<td>C# 或 C++</td>
+<td></td>
+</tr>
+<tr>
+<td>安卓Android</td>
+<td>HTML、CSS、<strong>JavaScript</strong> + cordova</td>
+<td>JAVA</td>
+<td></td>
+</tr>
+<tr>
+<td>苹果IOS</td>
+<td>HTML、CSS、<strong>JavaScript</strong> + cordova</td>
+<td>Swift</td>
+<td></td>
+</tr>
+<tr>
+<td>微信小程序</td>
+<td>WXML、WXSS、<strong>JavaScript</strong></td>
+<td>无</td>
+<td>WXML、WXSS与HTML、CSS类似</td>
+</tr>
+<tr>
+<td>后端服务器</td>
+<td>Nodejs</td>
+<td>PHP 或 Java等等</td>
+<td>Nodejs本质仍是 <strong>JavaScript</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 class="mume-header" id="%E6%AD%A6%E5%99%A8%E6%8E%92%E8%A1%8C%E6%A6%9C">武器排行榜</h2>
 
-<ol>
-<li>百度git 并运行安装<br>
-<img src="images\%E7%99%BE%E5%BA%A6git.png?0.33500774220164065" alt=""></li>
-<li>在桌面上右键点击 <code>git bash Here</code></li>
-<li>输入<code>git clone https://github.com/alwxkxk/soft-and-hard.git</code>（聪明人&amp;懒鬼一般会复制粘贴）</li>
-<li>可以看到下载了一个文件夹，进去点击<code>第一次阅读.html</code></li>
-<li>整个教程在不断更新中，进入文件并运行<code>git pull</code>即可更新。<br>
-<img src="images\git%E4%B8%8B%E8%BD%BD%E6%95%99%E7%A8%8B.gif?0.7098491958961473" alt=""></li>
-<li>之后就进入到Part1 点击<code>index.html</code>正式开始阅读。</li>
-</ol>
-<h2 class="mume-header" id="%E6%8F%90%E9%97%AE">提问</h2>
-
-<p>整个教程都是在gitHub上开源，所以必须要学习git（软件开发必学）,遇到任何问题提Issues。<br>
-<img src="images\%E5%A6%82%E4%BD%95%E6%8F%90%E9%97%AE.png?0.24901832400124158" alt=""></p>
-<h3 class="mume-header" id="%E6%8F%90%E9%97%AE%E4%B9%8B%E5%89%8D">提问之前</h3>
-
-<ol>
-<li><strong>新手入门问题，95%都已经被提问过，并且被解答。搜索是最快的解决问题手段</strong></li>
-<li>提问之前必须是你应当尽力尝试解决过，搜索过，在Issues搜索过没有重复才提问。</li>
-</ol>
-<h3 class="mume-header" id="%E6%8F%90%E9%97%AE%E8%A7%84%E8%8C%83">提问规范</h3>
-
-<ol>
-<li>要精确定价位置，是Part1第几节的哪一步报错卡住了，附上图片。</li>
-<li>描述一下你尝试解决问题的过程与现象。</li>
-</ol>
-<h2 class="mume-header" id="%E6%95%99%E7%A8%8B%E7%9B%AE%E5%BD%95-%E4%B8%8E-%E5%AE%89%E6%8E%92">教程目录 与 安排</h2>
-
-<h3 class="mume-header" id="part1">Part1</h3>
-
-<p><a href="./Part1/index.html">Part1 让项目运行</a><br>
-整个项目介绍并让大家先简单地运行起来~ 包含ESP8622烧录固件，各环节自调与联调。</p>
-<ul>
-<li>前提：有一定硬件调试经验（USART串口调试，AT指令）</li>
-<li>目标：把Part1 的demo运行起来，实现本地WIFI下手机监控硬件。</li>
-<li>关键词：STM32、串口调试、AT指令、ESP8266、git、网络调试助手</li>
-<li>耗时：估计5到8小时</li>
-</ul>
-<h3 class="mume-header" id="part2">Part2</h3>
-
-<p><a href="./Part2/index.html">Part2</a><br>
-讲解Part1 demo，包含静态网页制作，express框架。</p>
-<ul>
-<li>目标：简单的网页开发与Nodejs应该能入门了，有能力修改出自己想要的页面效果。</li>
-<li>关键词：HTML、Javascript、CSS、Jquery、bootstrap、w3cschool、菜鸟教程、《深入浅出nodejs》、《七天学会NodeJS》、TCP服务器、express</li>
-<li>耗时：自学网页开发（估计5到8天），自学nodejs（估计5到10天），共估计10到20天差不多能入个门。<strong>1天按8到12个小时来计算（超高强度），下面同理</strong></li>
-</ul>
-<h3 class="mume-header" id="part3">Part3</h3>
-
-<p>将Part1 demo运行在云服务器上，主要是学习linux（ubuntu），云服务器各种折腾。</p>
-<ul>
-<li>目标：Linux初步入门、部署到云服务器上，此时真正实现远程监控硬件。</li>
-<li>关键词：ubuntu、云服务器、vi、《鳥哥的 Linux 私房菜》、bash、Xshell、winSCP</li>
-<li>耗时：自学linux估计5到10天左右能入个门。</li>
-</ul>
-<h3 class="mume-header" id="part4">Part4</h3>
-
-<p>引入mongoDB数据库，将数据保存到数据库里，并将历史数据可视化。<br>
-（可选学）并讲一些协议，包含TCP协议(讲一下基于TCP自定义自己的协议规则)，HTTP协议，websocket协议。然后会进行优化，如把HTTP轮询换成websocket协议。</p>
-<ul>
-<li>目标：完成Part4 demo，数据可视化会让整个效果更炫，增加实时性，这个物联网项目基本成型。</li>
-<li>关键词：《计算机网络》、tcpdump、wireshark、《TCP/IP详解》、socketio库、echart库、TLV格式</li>
-<li>耗时：数据可视化几个小时入个门，数据库估计2天入门，协议简单地点一下1天，要想跟着继续深入可能要多花几天。整个可能需要5到10天吧。</li>
-</ul>
-<h3 class="mume-header" id="part5">Part5</h3>
-
-<p>Part5及往后看阅读情况写吧。<br>
-各种性能测试与优化，ESP8266的AT固件改成自己编译的固件（这个蛮难搞的），说一下各物联网平台。</p>
-<ul>
-<li>关键词：redis、nginx、CDN</li>
-</ul>
-<h3 class="mume-header" id="part6">Part6</h3>
-
-<p>使用electron开发PC桌面软件，使用cordova开发手机APP。</p>
-<ul>
-<li>关键词：electron、cordova</li>
-</ul>
+<p><img src="images\%E6%AD%A6%E5%99%A8%E6%8E%92%E8%A1%8C%E6%A6%9C1.png?0.10638523847509473" alt=""><br>
+<img src="images\%E6%AD%A6%E5%99%A8%E6%8E%92%E8%A1%8C%E6%A6%9C2.png?0.038786935265090916" alt=""><br>
+<img src="images\%E6%AD%A6%E5%99%A8%E6%8E%92%E8%A1%8C%E6%A6%9C3.png?0.2560212099182233" alt=""></p>
 <h2 class="mume-header" id="%E9%A2%98%E5%A4%96%E8%AF%9D">题外话</h2>
 
 <p>如果是学生想多点动手的机会，可以跟着老师混，相当于给老师打杂，而老师会给你提供实验室和项目与一定的经费给你做项目，做项目的过程能积累自己的能力。毕竟示波器、各种仪器各种元器件都是钱啊~如果恰好你是华南某农业大学的学生，想去跟老师混的话可以找找孙道宗老师。<br>
