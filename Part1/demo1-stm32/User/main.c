@@ -1,9 +1,9 @@
 /**
-软硬结合demo1-stm32
-软硬结合——写给硬件开发工程师的全栈入门实战。https://github.com/alwxkxk/soft-and-hard
-别人已经写好的代码我就直接搬运使用了，不再浪费时间重复做功了。
-本代码复制粘贴了大量野火、机智云jason的代码，请勿直接用于商业用途。
-搬运时请保留声明以尊重他人的劳动成果。
+锟斤拷硬锟斤拷锟絛emo1-stm32
+锟斤拷硬锟斤拷稀锟斤拷锟叫达拷锟接诧拷锟斤拷锟斤拷锟斤拷锟斤拷锟绞︼拷锟饺伙拷锟斤拷锟绞嫡斤拷锟絟ttps://github.com/alwxkxk/soft-and-hard
+锟斤拷锟斤拷锟窖撅拷写锟矫的达拷锟斤拷锟揭撅拷直锟接帮拷锟斤拷使锟斤拷锟剿ｏ拷锟斤拷锟斤拷锟剿凤拷时锟斤拷锟截革拷锟斤拷锟斤拷锟剿★拷
+锟斤拷锟斤拷锟诫复锟斤拷粘锟斤拷锟剿达拷锟斤拷野锟金、伙拷锟斤拷锟斤拷jason锟侥达拷锟诫，锟斤拷锟斤拷直锟斤拷锟斤拷锟斤拷锟斤拷业锟斤拷途锟斤拷
+锟斤拷锟斤拷时锟诫保锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟剿碉拷锟酵讹拷锟缴癸拷锟斤拷
 */
 
 
@@ -14,39 +14,39 @@
 #include "ESP8266.h" 
 #include "bsp_adc.h"
 
-#define 	WIFI_SSID 										"tp-link" //WIFI名 必须根据自己情况修改
-#define 	WIFI_PASSWORD 								"12345678" // WIFI密码 必须根据自己情况修改
-#define  	TCP_IP                   			"192.168.1.121"
+#define 	WIFI_SSID 										"tp-link" //WIFI锟斤拷 锟斤拷锟斤拷锟斤拷锟斤拷约锟斤拷锟斤拷锟睫革拷
+#define 	WIFI_PASSWORD 								"12345678" // WIFI锟斤拷锟斤拷 锟斤拷锟斤拷锟斤拷锟斤拷约锟斤拷锟斤拷锟睫革拷
+#define  	TCP_IP                   			"127.0.0.1"
 #define  	TCP_PORT                   		2424
 
 
 extern __IO uint16_t ADC_ConvertedValue;
-// 局部变量，用于保存转换计算后的电压值 	 
+// 锟街诧拷锟斤拷锟斤拷锟斤拷锟斤拷锟节憋拷锟斤拷转锟斤拷锟斤拷锟斤拷锟侥碉拷压值 	 
 float ADC_ConvertedValueLocal;      
 int LED1_Flag;
 
-uint32_t time = 0; // ms 计时变量 
+uint32_t time = 0; // ms 锟斤拷时锟斤拷锟斤拷 
 
 int main(void)
 {
 	char adcValue[20];
 	LED_GPIO_Init();
-	// ADC 初始化
+	// ADC 锟斤拷始锟斤拷
 	ADCx_Init();
 	LED_OFF(LED1);
 	LED1_Flag = 0;
 	LED_OFF(LED2);
 	LED_OFF(LED3);
 	LED_OFF(LED4);
-	  /*初始化USART 配置模式为 115200 8-N-1，中断接收*/
+	  /*锟斤拷始锟斤拷USART 锟斤拷锟斤拷模式为 115200 8-N-1锟斤拷锟叫断斤拷锟斤拷*/
   USART_Config();
 	USART2_Config();
 	GENERAL_TIM_Init();
-	/* 发送一个字符串 */
-//	Usart_SendString( DEBUG_USART1,"串口一通信验证\n");
-//	Usart_SendString( DEBUG_USART2,"串口二通信验证\n");
+	/* 锟斤拷锟斤拷一锟斤拷锟街凤拷锟斤拷 */
+//	Usart_SendString( DEBUG_USART1,"锟斤拷锟斤拷一通锟斤拷锟斤拷证\n");
+//	Usart_SendString( DEBUG_USART2,"锟斤拷锟节讹拷通锟斤拷锟斤拷证\n");
 	
-	//通过AT设置模式并连接WIFI，连接TCP
+	//通锟斤拷AT锟斤拷锟斤拷模式锟斤拷锟斤拷锟斤拷WIFI锟斤拷锟斤拷锟斤拷TCP
 	AT_Mode_Set(AT_MODE_STATION);
 	AT_connectWIFI(WIFI_SSID,WIFI_PASSWORD);
 	AT_connectTCP(TCP_IP,TCP_PORT);
@@ -54,30 +54,30 @@ int main(void)
 	
   while(1)
 	{	
-		if ( time == 1000 ) /* 1000 * 1 ms = 1s 时间到 */
+		if ( time == 1000 ) /* 1000 * 1 ms = 1s 时锟戒到 */
     {
 			time = 0;
-			//接收服务器的指令并根据指令开关LED
+			//锟斤拷锟秸凤拷锟斤拷锟斤拷锟斤拷指锟筋并锟斤拷锟斤拷指锟筋开锟斤拷LED
 			AT_TCP_Receive();
-			// 转换ADC1 的值
+			// 转锟斤拷ADC1 锟斤拷值
 			ADC_ConvertedValueLocal =(float) ADC_ConvertedValue/4096*3.3; 
 			
-			//特别地，当ADC1的值低于1时关闭LED1
+			//锟截憋拷兀锟斤拷锟紸DC1锟斤拷值锟斤拷锟斤拷1时锟截憋拷LED1
 			if(ADC_ConvertedValueLocal <1.0 && LED1_Flag == 1){
-				printf(" 当前ADC1：%.2f,关闭LED1\r\n", ADC_ConvertedValueLocal); 
+				printf(" 锟斤拷前ADC1锟斤拷%.2f,锟截憋拷LED1\r\n", ADC_ConvertedValueLocal); 
 				LED_OFF(LED1);
 				LED1_Flag = 0;
 				AT_Sent_TCP_Data("LED1:0");
 			}
-			//当ADC1的值高于3时开启LED1
+			//锟斤拷ADC1锟斤拷值锟斤拷锟斤拷3时锟斤拷锟斤拷LED1
 			if(ADC_ConvertedValueLocal >3.0 && LED1_Flag == 0){
-				printf(" 当前ADC1：%.2f,打开LED1\r\n", ADC_ConvertedValueLocal); 
+				printf(" 锟斤拷前ADC1锟斤拷%.2f,锟斤拷LED1\r\n", ADC_ConvertedValueLocal); 
 				LED_ON(LED1);
 				LED1_Flag = 1;
 				AT_Sent_TCP_Data("LED1:1");
 			}
 			
-			//发送当前 ADC1的值
+			//锟斤拷锟酵碉拷前 ADC1锟斤拷值
 			sprintf(adcValue,"ADC1:%.2f",ADC_ConvertedValueLocal);
 			AT_Sent_TCP_Data(adcValue);				
     }        

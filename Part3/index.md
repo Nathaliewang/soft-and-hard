@@ -107,14 +107,9 @@ sudo apt-get install -y nodejs
 为了方便部署，特意将服务器的代码分隔到另一个github项目（这样就不用下载一堆图片与其它无关的东西）。
 登陆云服务器，安装git，`sudo apt-get install -y git`
 下载服务器代码`git clone https://github.com/alwxkxk/soft-and-hard-server.git`
-进入Part1/demo 安装依赖`npm install`，修改配置文件`vi ./config/config.js`，然后运行`npm start`。
+进入Part1/demo 安装依赖`npm install`，然后运行`npm start`。
 
-云服务器的内网IP地址在服务器平台可以看到，也可以执行`ifconfig`找到。
-注意，配置使用的是内网IP，浏览器访问页面时用的是外网IP地址。（一定要区分好内网IP、外网IP）
-以我的服务器为例，内网IP地址是10.135.13.174，外网地址为119.29.107.47。
 
-配置文件写的是10.135.13.174。(可以看到我用Xshell终端登陆的是外网IP)
-@import "./images/匹配内网IP地址.png"
 运行起来，并且多开一个终端使用curl验证一下：
 @import "./images/使用curl 验证.png"
 浏览器访问的页面是http://119.29.107.47:8888/tcp-page
